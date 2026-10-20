@@ -17,6 +17,11 @@ dist-ssr
 CLAUDE.md
 PROMPT-INICIAL.md
 
+# Material de handoff de diseño (capturas, flujos, componentes sin estilo,
+# tokens con notas de uso): se queda en el disco, no se publica.
+referencia/
+design/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
