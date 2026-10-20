@@ -1,0 +1,129 @@
+/* P6/P7 · Plan (Decidir · Itinerario · Mapa) — src/screens/trip/Plan.jsx */
+
+.plan { padding: var(--espacio-4) var(--espacio-4) var(--espacio-8); display: flex; flex-direction: column; gap: var(--espacio-4); }
+
+.plan__cabecera { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--espacio-3); }
+.plan__titulo-fila { display: flex; flex-wrap: wrap; align-items: center; gap: var(--espacio-3); }
+.plan__chips { display: flex; gap: var(--espacio-2); overflow-x: auto; }
+.plan__meta-desk { display: none; }
+.plan__acciones-desk { display: none; }
+
+/* En mobile, Decidir muestra primero la votación destacada y después las
+   listas (al revés que en desktop, donde las listas van a la izquierda). */
+.plan__decidir-cols { display: flex; flex-direction: column; gap: var(--espacio-4); }
+.plan__decidir-col-der { order: -1; }
+
+/* Decidir */
+.plan__votacion { border-radius: var(--radio-lg); overflow: hidden; box-shadow: var(--sombra-card); }
+.plan__votacion-hero { padding: var(--espacio-4); background: var(--lima); color: var(--sobre-color); }
+.plan__votacion-meta { font: 700 12px/16px var(--font-texto); letter-spacing: 0.04em; text-transform: uppercase; opacity: 0.8; }
+.plan__votacion-titulo { margin-top: var(--espacio-1); font-family: var(--font-display); font-size: 30px; font-weight: 700; }
+.plan__votacion-progreso { margin-top: var(--espacio-3); display: flex; align-items: center; gap: var(--espacio-2); }
+.plan__dot { width: 14px; height: 14px; border-radius: 50%; border: 2px solid currentColor; }
+.plan__dot--on { background: currentColor; }
+.plan__votacion-body { padding: var(--espacio-4); background: var(--papel-elevado); display: flex; flex-direction: column; gap: var(--espacio-2); }
+.plan__votacion-pie { margin-top: var(--espacio-2); display: flex; align-items: center; justify-content: space-between; gap: var(--espacio-3); flex-wrap: wrap; }
+.plan__votacion-faltan { display: flex; align-items: center; gap: var(--espacio-2); color: var(--tinta-suave); }
+.plan__votacion-acciones { display: flex; gap: var(--espacio-2); }
+
+.plan__lista-titulo { color: var(--tinta-suave); margin-top: var(--espacio-2); }
+.plan__lista { display: flex; flex-direction: column; gap: var(--espacio-2); }
+.plan__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--espacio-3);
+  padding: var(--espacio-4);
+  background: var(--papel-elevado);
+  border-radius: var(--radio-md);
+  box-shadow: var(--sombra-card);
+}
+.plan__item--decidida { background: var(--papel-hundido); box-shadow: none; }
+.plan__item-titulo { font: 600 16px/22px var(--font-texto); }
+.plan__item-detalle { margin-top: 2px; color: var(--tinta-suave); }
+.plan__item-detalle--ok { color: var(--positivo); }
+
+/* Itinerario */
+.plan__dias { display: flex; gap: var(--espacio-2); overflow-x: auto; padding-bottom: 2px; }
+.plan__dia {
+  flex: none;
+  width: 72px;
+  padding: var(--espacio-3);
+  border-radius: var(--radio-lg);
+  background: var(--papel-elevado);
+  box-shadow: var(--sombra-card);
+  border: 0;
+  text-align: left;
+  cursor: pointer;
+  color: var(--tinta);
+}
+.plan__dia--hoy { background: var(--lima-tinte); box-shadow: none; }
+.plan__dia--on { background: var(--tinta); color: var(--papel); box-shadow: none; }
+.plan__dia-nombre { display: block; color: var(--tinta-suave); }
+.plan__dia--on .plan__dia-nombre { color: inherit; opacity: 0.8; }
+.plan__dia-num { display: block; font-family: var(--font-display); font-size: 24px; font-weight: 800; }
+.plan__dia-label { display: block; font-size: 12px; color: var(--tinta-suave); }
+.plan__dia--on .plan__dia-label { color: inherit; opacity: 0.8; }
+
+.plan__dia-cabecera { display: flex; flex-direction: column; gap: 2px; }
+
+.plan__conflicto {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--espacio-3);
+  padding: var(--espacio-4);
+  border-radius: var(--radio-md);
+  background: var(--aviso-relleno);
+  color: var(--sobre-color);
+}
+.plan__conflicto-texto { flex: 1 1 240px; }
+
+.plan__agregar-plan { align-self: flex-start; }
+
+/* El mapa del día (col-der) es un panel de desktop: en mobile, Itinerario
+   solo muestra la línea de tiempo; el recorrido se mira en el chip Mapa. */
+.plan__itinerario-col-der { display: none; }
+
+.plan__mapa-placeholder {
+  padding: var(--espacio-8) var(--espacio-4);
+  border-radius: var(--radio-lg);
+  background: var(--papel-hundido);
+  text-align: center;
+  color: var(--tinta-suave);
+}
+
+@media (min-width: 1024px) {
+  .plan { padding: var(--espacio-8) var(--espacio-8) var(--espacio-12); gap: var(--espacio-6); max-width: 1220px; }
+  .plan__titulo { font-size: 44px; line-height: 48px; }
+  .plan__meta-desk { display: inline; color: var(--tinta-suave); }
+  .plan__acciones-desk { display: flex; gap: var(--espacio-2); }
+
+  .plan__decidir-cols { flex-direction: row; flex-wrap: wrap; gap: var(--espacio-6); align-items: flex-start; }
+  .plan__decidir-col-izq { flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: var(--espacio-4); }
+  .plan__decidir-col-der { order: 0; flex: 1.3 1 420px; min-width: 0; }
+  .plan__votacion-titulo { font-size: 38px; }
+
+  .plan__itinerario-cols { display: flex; flex-wrap: wrap; gap: var(--espacio-6); align-items: stretch; }
+  .plan__itinerario-col-izq { flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: var(--espacio-4); }
+  .plan__itinerario-col-der { display: block; flex: 1 1 380px; min-width: 0; position: relative; min-height: 520px; border-radius: 32px; overflow: hidden; background: var(--papel-hundido); }
+  .plan__itinerario-col-der svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .plan__dia-titulo { font-size: 40px; line-height: 44px; }
+
+  .plan__mapa-flotante {
+    position: absolute;
+    left: var(--espacio-4);
+    right: var(--espacio-4);
+    bottom: var(--espacio-4);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--espacio-2);
+    padding: var(--espacio-3) var(--espacio-4);
+    border-radius: var(--radio-lg);
+    background: var(--papel-elevado);
+    box-shadow: var(--sombra-flotante);
+  }
+}

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>PX — Crear viaje (desktop)</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/px/tokens.css">
+<link rel="stylesheet" href="ds/px/components/bundle.css">
+<script src="ds/px/components/bundle.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&amp;family=Figtree:wght@400..700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:var(--mandarina-texto)}a:hover{color:var(--tinta)}
+</style>
+</helmet>
+<div style="min-height: 1000px; background: var(--papel); color: var(--tinta); font-family: var(--font-texto); display: flex; flex-wrap: wrap">
+<nav aria-label="Principal" style="flex: 1 1 240px; max-width: 280px; background: var(--papel-hundido); padding: 32px 20px; box-sizing: border-box; display: flex; flex-direction: column; gap: 28px">
+<p style="margin: 0 0 8px 12px; font-family: var(--font-display); font-size: 30px; line-height: 30px; font-weight: 800; letter-spacing: -0.03em">PX<span style="color: var(--mandarina)">.</span></p>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<a href="#" aria-current="page" style="display: flex; align-items: center; gap: 12px; min-height: 48px; padding: 0 16px; border-radius: 999px; background: var(--mandarina); color: var(--sobre-color); font-weight: 700; text-decoration: none"><x-import component-from-global-scope="PX.Icon" name="route"></x-import>Mis viajes</a>
+<a href="#" style="display: flex; align-items: center; gap: 12px; min-height: 48px; padding: 0 16px; border-radius: 999px; color: var(--tinta); font-weight: 600; text-decoration: none"><x-import component-from-global-scope="PX.Icon" name="user"></x-import>Vos</a>
+</div>
+</nav>
+<main style="flex: 999 1 560px; min-width: 0; padding: 48px 56px 64px; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start; max-width: 1220px">
+<div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 28px; max-width: 520px">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<p style="margin: 0; font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: 0.06em; color: var(--tinta-suave)">NUEVO VIAJE</p>
+<h1 style="margin: 0; font-family: var(--font-display); font-size: 64px; line-height: 62px; font-weight: 800; letter-spacing: -0.04em">¿A dónde se van?</h1>
+<p style="margin: 0; font-size: 18px; line-height: 27px; color: var(--tinta-suave)">Si todavía no lo saben, no pasa nada: lo deciden entre todos adentro.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<x-import component-from-global-scope="PX.TextField" label="Destino" placeholder="Ciudad, provincia o país" default-value="Bariloche"></x-import>
+<div style="display: flex; gap: 8px"><x-import component-from-global-scope="PX.Chip">Todavía no sabemos</x-import></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<span style="font-size: 15px; line-height: 20px; font-weight: 600">¿Cuándo?</span>
+<div style="display: flex; flex-wrap: wrap; gap: 10px">
+<a href="#" style="flex: 1 1 160px; display: flex; flex-direction: column; padding: 14px 16px; border-radius: 16px; border: 1.5px solid var(--linea-fuerte); background: var(--papel-elevado); color: var(--tinta); text-decoration: none"><span style="font-size: 13px; line-height: 18px; color: var(--tinta-suave)">Ida</span><b style="font-family: var(--font-display); font-size: 24px; line-height: 28px">jue 14 ene</b></a>
+<a href="#" style="flex: 1 1 160px; display: flex; flex-direction: column; padding: 14px 16px; border-radius: 16px; border: 1.5px solid var(--linea-fuerte); background: var(--papel-elevado); color: var(--tinta); text-decoration: none"><span style="font-size: 13px; line-height: 18px; color: var(--tinta-suave)">Vuelta</span><b style="font-family: var(--font-display); font-size: 24px; line-height: 28px">jue 21 ene</b></a>
+</div>
+<div style="display: flex; gap: 8px"><x-import component-from-global-scope="PX.Chip">Lo votamos después</x-import></div>
+</div>
+<x-import component-from-global-scope="PX.TextField" label="Nombre del viaje" default-value="Bariloche con los chicos" hint="Así lo va a ver todo el grupo"></x-import>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<span style="font-size: 15px; line-height: 20px; font-weight: 600">¿Con quién?</span>
+<div style="display: flex; gap: 8px">
+<x-import component-from-global-scope="PX.Chip" selected="{{yes}}" tone="previaje">En grupo</x-import>
+<x-import component-from-global-scope="PX.Chip">Solo</x-import>
+</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 10px">
+<x-import component-from-global-scope="PX.Button" variant="primario" icon-right="chevron">Crear e invitar al grupo</x-import>
+<x-import component-from-global-scope="PX.Button" variant="fantasma">Cancelar</x-import>
+</div>
+</div>
+<aside style="flex: 1 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: 0.06em; color: var(--tinta-suave)">ASÍ LO VA A VER EL GRUPO</p>
+<div style="position: relative; overflow: hidden; border-radius: 32px; background: var(--lima); color: var(--sobre-color); padding: 28px; min-height: 360px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between">
+<svg width="320" height="220" viewBox="0 0 320 220" aria-hidden="true" style="position: absolute; right: -20px; top: -10px"><path d="M10 200 C 90 200, 110 70, 200 90 S 300 150, 310 30" style="fill: none; stroke: var(--sobre-color); stroke-width: 6; stroke-linecap: round; stroke-dasharray: 0.1 16; opacity: 0.4"></path><circle cx="310" cy="30" r="10" style="fill: var(--papel); stroke: var(--sobre-color); stroke-width: 4"></circle></svg>
+<span style="position: relative; align-self: flex-start; font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: 0.06em; background: var(--papel); color: var(--tinta); padding: 4px 12px; border-radius: 999px">PREVIAJE</span>
+<div style="position: relative; display: flex; flex-direction: column; gap: 8px">
+<span style="font-family: var(--font-display); font-size: 72px; line-height: 66px; font-weight: 800; letter-spacing: -0.04em">Bariloche</span>
+<span style="font-size: 17px; line-height: 24px; font-weight: 600">Bariloche con los chicos · 14–21 ene</span>
+<span style="font-size: 15px; line-height: 22px">Faltan 90 días. Ahora sumá a la gente.</span>
+</div>
+</div>
+<p style="margin: 0; font-size: 14px; line-height: 20px; color: var(--tinta-suave)">El viaje arranca en Previaje y pasa solo a Viaje el día de la salida.</p>
+</aside>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1000}}'>
+class Component extends DCLogic {
+renderVals() {
+return { yes: true };
+}
+}
+</script>
+</body>
+</html>

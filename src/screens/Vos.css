@@ -1,0 +1,39 @@
+/* P13 · Vos — src/screens/Vos.jsx */
+
+.vos { padding: var(--espacio-4); max-width: 1200px; display: flex; flex-direction: column; gap: var(--espacio-4); }
+
+.vos__hero { padding: var(--espacio-5); border-radius: var(--radio-lg); display: flex; align-items: center; gap: var(--espacio-4); }
+.vos__hero-avatar { flex: none; width: 72px; height: 72px; border-radius: 50%; background: var(--tinta); color: var(--papel); display: grid; place-items: center; font-family: var(--font-display); font-size: 28px; font-weight: 800; }
+.vos__hero-nombre { font-family: var(--font-display); font-size: 32px; font-weight: 700; }
+.vos__hero-detalle { margin-top: 2px; color: var(--tinta-suave); }
+
+.vos__stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--espacio-3); }
+.vos__stat { padding: var(--espacio-4); border-radius: var(--radio-lg); display: flex; flex-direction: column; gap: 2px; }
+.vos__stat--tinta { background: var(--tinta); color: var(--papel); }
+.vos__stat--mandarina { background: var(--mandarina); color: var(--sobre-color); }
+.vos__stat--cielo { background: var(--cielo); color: var(--sobre-color); }
+.vos__stat-num { font-family: var(--font-display); font-size: 32px; font-weight: 800; }
+
+.vos__card { padding: var(--espacio-4); border-radius: var(--radio-md); background: var(--papel-elevado); box-shadow: var(--sombra-card); display: flex; flex-direction: column; gap: var(--espacio-3); }
+.vos__card-titulo { font: 600 17px/22px var(--font-texto); }
+.vos__colores { display: flex; gap: var(--espacio-3); }
+.vos__color-btn { width: 44px; height: 44px; border-radius: 50%; border: 3px solid transparent; padding: 0; cursor: pointer; }
+.vos__color-btn--on { border-color: var(--tinta); }
+
+.vos__fila { display: flex; align-items: center; justify-content: space-between; gap: var(--espacio-3); }
+.vos__fila-texto { display: flex; flex-direction: column; }
+.vos__fila-detalle { color: var(--tinta-suave); }
+
+@media (min-width: 768px) {
+  .vos { padding: var(--espacio-6); }
+}
+
+@media (min-width: 1024px) {
+  .vos { padding: var(--espacio-12) var(--espacio-8); }
+  .vos__hero { flex-wrap: wrap; }
+  .vos__topfila { display: flex; flex-wrap: wrap; gap: var(--espacio-3); }
+  .vos__topfila > .vos__hero { flex: 2 1 420px; }
+  .vos__stats { flex: 1 1 260px; grid-template-columns: repeat(2, 1fr); align-content: start; }
+  .vos__cols { display: flex; flex-wrap: wrap; gap: var(--espacio-4); }
+  .vos__cols > .vos__card { flex: 1 1 320px; min-width: 0; }
+}

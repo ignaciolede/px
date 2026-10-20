@@ -1,0 +1,117 @@
+/* P3 · Resumen Previaje — src/screens/trip/ResumenPreviaje.jsx */
+
+.rp__hero {
+  padding: var(--espacio-4);
+  background: var(--lima-tinte);
+}
+.rp__hero-top { display: flex; align-items: center; justify-content: space-between; gap: var(--espacio-3); }
+.rp__volver { display: inline-flex; align-items: center; gap: var(--espacio-1); border: 0; background: transparent; padding: var(--espacio-1) 0; font: 600 15px/20px var(--font-texto); color: var(--tinta); cursor: pointer; }
+.rp__volver-icon { transform: rotate(180deg); }
+.rp__avatares { border: 0; background: transparent; padding: 0; cursor: pointer; }
+.rp__sobretitulo { color: var(--tinta-suave); }
+.rp__titulo-fila { margin-top: var(--espacio-3); display: flex; align-items: flex-start; justify-content: space-between; gap: var(--espacio-4); }
+.rp__titulo { max-width: 22ch; }
+.rp__fechas { margin-top: var(--espacio-1); color: var(--tinta-suave); }
+
+.rp__cuenta {
+  flex: none;
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background: var(--lima);
+  color: var(--sobre-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.rp__cuenta-num { font-family: var(--font-display); font-size: 30px; line-height: 32px; font-weight: 800; }
+.rp__cuenta-label { font-size: 11px; line-height: 14px; font-weight: 600; }
+
+.rp__cuenta-card {
+  display: none;
+}
+
+.rp__stage { margin-top: var(--espacio-4); }
+
+.rp__body { padding: var(--espacio-6) var(--espacio-4) var(--espacio-8); display: flex; flex-direction: column; gap: var(--espacio-8); }
+
+.rp__seccion-head { display: flex; align-items: baseline; justify-content: space-between; gap: var(--espacio-2); }
+.rp__seccion-titulo { font-family: var(--font-display); font-size: 22px; font-weight: 600; }
+.rp__seccion-meta { color: var(--tinta-suave); }
+
+.rp__toca { margin-top: var(--espacio-4); display: flex; flex-direction: column; gap: var(--espacio-3); }
+.rp__toca-card { padding: var(--espacio-4); background: var(--papel-elevado); border-radius: var(--radio-md); box-shadow: var(--sombra-card); }
+.rp__toca-tag {
+  display: inline-flex;
+  padding: 2px var(--espacio-2);
+  border-radius: var(--radio-pill);
+  font: 700 12px/16px var(--font-texto);
+  background: var(--aviso-relleno);
+  color: var(--tinta);
+}
+.rp__toca-card--doc .rp__toca-tag,
+.rp__toca-card--tarea .rp__toca-tag { background: var(--lima); }
+.rp__toca-titulo { margin-top: var(--espacio-2); font: 600 17px/22px var(--font-texto); }
+.rp__toca-detalle { margin-top: 2px; color: var(--tinta-suave); }
+.rp__toca-cta { margin-top: var(--espacio-4); }
+
+.rp__poll { border-radius: var(--radio-lg); overflow: hidden; box-shadow: var(--sombra-card); }
+.rp__poll-hero { padding: var(--espacio-4); background: var(--lima); color: var(--sobre-color); }
+.rp__poll-hero-meta { font: 700 12px/16px var(--font-texto); letter-spacing: 0.04em; text-transform: uppercase; opacity: 0.8; }
+.rp__poll-hero-titulo { margin-top: var(--espacio-1); font-family: var(--font-display); font-size: 28px; font-weight: 700; }
+.rp__poll-hero-progreso { margin-top: var(--espacio-3); }
+.rp__poll-body { padding: var(--espacio-4); background: var(--papel-elevado); display: flex; flex-direction: column; gap: var(--espacio-2); }
+.rp__poll-pie { margin-top: var(--espacio-2); display: flex; align-items: center; justify-content: space-between; gap: var(--espacio-3); flex-wrap: wrap; }
+.rp__poll-faltan { display: flex; align-items: center; gap: var(--espacio-2); color: var(--tinta-suave); }
+.rp__poll-acciones { display: flex; gap: var(--espacio-2); }
+
+.rp__checklist { padding: var(--espacio-5); border-radius: var(--radio-lg); background: var(--tinta); color: var(--papel); }
+.rp__checklist-cabecera { display: flex; align-items: baseline; justify-content: space-between; }
+.rp__checklist-num { font-family: var(--font-display); font-size: 40px; font-weight: 800; }
+.rp__checklist-num small { font-size: 18px; font-weight: 600; opacity: 0.7; }
+.rp__checklist-barra { margin-top: var(--espacio-3); height: 8px; border-radius: var(--radio-pill); background: rgba(255,255,255,0.18); overflow: hidden; }
+.rp__checklist-barra > span { display: block; height: 100%; background: var(--lima); }
+.rp__checklist-falta { margin-top: var(--espacio-3); opacity: 0.85; }
+
+.rp__card { padding: var(--espacio-4); border-radius: var(--radio-md); background: var(--papel-elevado); box-shadow: var(--sombra-card); }
+.rp__card-label { color: var(--tinta-suave); }
+.rp__card-monto { margin-top: var(--espacio-1); }
+.rp__card-nota { margin-top: 2px; color: var(--tinta-suave); }
+
+.rp__requisitos { display: flex; flex-direction: column; gap: var(--espacio-2); margin-top: var(--espacio-2); }
+.rp__requisito { display: flex; align-items: center; gap: var(--espacio-2); }
+.rp__requisito--ok { color: var(--positivo); }
+.rp__requisito--falta { color: var(--aviso); }
+.rp__requisito-marca { font-weight: 800; width: 16px; text-align: center; }
+
+.rp__rail { display: flex; flex-direction: column; gap: var(--espacio-4); }
+
+@media (min-width: 1024px) {
+  .rp__hero { padding: var(--espacio-8) var(--espacio-8) var(--espacio-6); }
+  .rp__hero-top { align-items: flex-start; }
+  .rp__volver { display: none; }
+  .rp__titulo-fila { align-items: center; }
+  .rp__titulo { font-size: 48px; line-height: 52px; max-width: 28ch; }
+  .rp__cuenta { display: none; }
+  .rp__cuenta-card {
+    display: flex;
+    flex: none;
+    width: 220px;
+    align-items: baseline;
+    gap: var(--espacio-3);
+    padding: var(--espacio-4) var(--espacio-5);
+    border-radius: var(--radio-lg);
+    background: var(--lima);
+    color: var(--sobre-color);
+  }
+  .rp__cuenta-card-num { font-family: var(--font-display); font-size: 56px; font-weight: 800; }
+  .rp__cuenta-card-texto { font: 600 14px/18px var(--font-texto); }
+
+  .rp__body { padding: var(--espacio-8); display: grid; grid-template-columns: 2fr 1fr; gap: var(--espacio-6); align-items: start; }
+  .rp__col-principal { display: flex; flex-direction: column; gap: var(--espacio-8); }
+  .rp__toca { flex-direction: row; }
+  .rp__toca-card { flex: 1; }
+  .rp__toca-cta { display: none; }
+  .rp__poll-hero-titulo { font-size: 36px; }
+}

@@ -1,0 +1,54 @@
+/* P8 · Agregar gasto — src/screens/trip/AgregarGasto.jsx */
+
+.ag { max-width: 640px; margin: 0 auto; padding: var(--espacio-4) var(--espacio-4) var(--espacio-8); display: flex; flex-direction: column; gap: var(--espacio-4); }
+
+.ag__top { display: flex; align-items: center; justify-content: space-between; }
+.ag__cancelar { border: 0; background: transparent; padding: var(--espacio-2) 0; font: 600 15px/20px var(--font-texto); color: var(--tinta); cursor: pointer; }
+.ag__top-titulo { font: 700 15px/20px var(--font-texto); }
+
+.ag__hero { padding: var(--espacio-5); border-radius: var(--radio-lg); background: var(--mandarina-tinte); display: flex; flex-direction: column; gap: var(--espacio-3); }
+.ag__hero-tag { display: inline-flex; align-items: center; gap: var(--espacio-1); align-self: flex-start; padding: 2px var(--espacio-2); border-radius: var(--radio-pill); background: var(--tinta); color: var(--papel); font: 700 12px/16px var(--font-texto); }
+.ag__ticket { align-self: center; width: 100%; max-width: 280px; padding: var(--espacio-4); background: var(--papel); border-radius: var(--radio-sm); box-shadow: var(--sombra-flotante); transform: rotate(-1deg); font-family: 'Courier New', monospace; }
+.ag__ticket-comercio { font-weight: 700; text-align: center; }
+.ag__ticket-fecha { margin-top: 2px; text-align: center; color: var(--tinta-suave); font-size: 13px; }
+.ag__ticket-items { margin-top: var(--espacio-3); display: flex; flex-direction: column; gap: 4px; font-size: 14px; }
+.ag__ticket-fila { display: flex; justify-content: space-between; gap: var(--espacio-2); }
+.ag__ticket-total { margin-top: var(--espacio-2); padding-top: var(--espacio-2); border-top: 2px dashed var(--tinta); display: flex; justify-content: space-between; font-weight: 700; background: var(--lima-tinte); }
+
+.ag__monto { font-variant-numeric: tabular-nums; }
+.ag__monto-detalle { color: var(--tinta-suave); margin-top: 2px; }
+
+.ag__bloque-titulo { font: 600 17px/22px var(--font-texto); }
+.ag__chips { display: flex; gap: var(--espacio-2); flex-wrap: wrap; }
+
+.ag__items { display: flex; flex-direction: column; gap: var(--espacio-2); }
+.ag__item { padding: var(--espacio-3) var(--espacio-4); border-radius: var(--radio-md); background: var(--papel-hundido); display: flex; flex-direction: column; gap: var(--espacio-2); }
+.ag__item-cabecera { display: flex; justify-content: space-between; gap: var(--espacio-2); }
+.ag__item-detalle { color: var(--tinta-suave); }
+.ag__item-avatares { display: flex; gap: var(--espacio-2); flex-wrap: wrap; }
+.ag__avatar-toggle { border: 0; background: transparent; padding: 0; cursor: pointer; border-radius: 50%; opacity: 0.35; }
+.ag__avatar-toggle--on { opacity: 1; }
+.ag__avatar-toggle:focus-visible { outline: 2px solid var(--foco); outline-offset: 2px; }
+
+.ag__partes { display: flex; flex-direction: column; gap: var(--espacio-2); }
+.ag__nota { color: var(--tinta-suave); }
+
+.ag__resumen { display: flex; flex-wrap: wrap; gap: var(--espacio-2); }
+.ag__resumen-persona {
+  padding: var(--espacio-2) var(--espacio-3);
+  border-radius: var(--radio-pill);
+  background: var(--mandarina-tinte);
+  font: 600 14px/20px var(--font-texto);
+}
+
+.ag__pie { display: flex; align-items: center; justify-content: flex-end; gap: var(--espacio-3); margin-top: var(--espacio-2); }
+.ag__pie-cancelar { border: 0; background: transparent; font: 600 15px/20px var(--font-texto); color: var(--tinta); cursor: pointer; }
+
+@media (min-width: 1024px) {
+  .ag { max-width: none; padding: 0; }
+  .ag__top { display: none; }
+  .ag__hero { flex-direction: row; align-items: center; justify-content: space-between; background: var(--mandarina); color: var(--sobre-color); border-radius: var(--radio-lg) var(--radio-lg) 0 0; }
+  .ag__hero-texto { display: flex; flex-direction: column; gap: 2px; }
+  .ag__ticket { display: none; }
+  .ag__card { padding: var(--espacio-5); background: var(--papel-elevado); border-radius: 0 0 var(--radio-lg) var(--radio-lg); box-shadow: var(--sombra-card); display: flex; flex-direction: column; gap: var(--espacio-4); }
+}

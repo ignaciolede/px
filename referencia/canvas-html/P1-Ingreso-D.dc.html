@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>PX — Ingreso (desktop)</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/px/tokens.css">
+<link rel="stylesheet" href="ds/px/components/bundle.css">
+<script src="ds/px/components/bundle.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&amp;family=Figtree:wght@400..700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:var(--mandarina-texto)}a:hover{color:var(--tinta)}
+</style>
+</helmet>
+<div style="min-height: 1000px; background: var(--papel); color: var(--tinta); font-family: var(--font-texto); display: flex; flex-wrap: wrap">
+<div style="flex: 999 1 560px; min-width: 0; background: var(--tinta); color: var(--papel); padding: 48px 56px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; gap: 40px; overflow: hidden">
+<p style="margin: 0; font-family: var(--font-display); font-size: 32px; line-height: 32px; font-weight: 800; letter-spacing: -0.03em">PX<span style="color: var(--mandarina)">.</span></p>
+<svg viewBox="0 0 760 520" aria-hidden="true" style="width: 100%; height: auto; display: block; max-width: 820px">
+<rect x="0" y="0" width="360" height="300" rx="40" style="fill: var(--mandarina)"></rect>
+<rect x="384" y="56" width="376" height="200" rx="40" style="fill: var(--lima)"></rect>
+<rect x="0" y="324" width="250" height="196" rx="40" style="fill: #2b3732"></rect>
+<rect x="274" y="324" width="200" height="196" rx="40" style="fill: var(--cielo)"></rect>
+<circle cx="610" cy="410" r="96" style="fill: var(--papel)"></circle>
+<path d="M90 150 C 180 150, 220 50, 320 90 S 470 190, 540 150 S 600 120, 640 160 S 560 300, 380 420" style="fill: none; stroke: var(--tinta); stroke-width: 8; stroke-linecap: round; stroke-dasharray: 0.1 22"></path>
+<circle cx="90" cy="150" r="14" style="fill: var(--papel); stroke: var(--tinta); stroke-width: 5"></circle>
+<circle cx="540" cy="150" r="14" style="fill: var(--papel); stroke: var(--tinta); stroke-width: 5"></circle>
+<circle cx="380" cy="420" r="14" style="fill: var(--papel); stroke: var(--tinta); stroke-width: 5"></circle>
+</svg>
+<h2 style="margin: 0; font-family: var(--font-display); font-size: 56px; line-height: 58px; font-weight: 700; letter-spacing: -0.03em; max-width: 680px">Organizar el viaje también es parte del viaje.</h2>
+</div>
+<div style="flex: 1 1 420px; display: flex; align-items: center; justify-content: center; padding: 48px 32px; box-sizing: border-box">
+<div style="width: 100%; max-width: 400px; display: flex; flex-direction: column; gap: 28px">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<h1 style="margin: 0; font-family: var(--font-display); font-size: 40px; line-height: 44px; font-weight: 700; letter-spacing: -0.02em">Hola. ¿Arrancamos?</h1>
+<p style="margin: 0; font-size: 18px; line-height: 27px; color: var(--tinta-suave)">Entrá en dos toques y armá el viaje con tu grupo: planes, votaciones, gastos y papeles, todo junto.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<x-import component-from-global-scope="PX.Button" variant="primario" full="{{yes}}">Seguir con Google</x-import>
+<x-import component-from-global-scope="PX.Button" variant="secundario" full="{{yes}}">Seguir con Apple</x-import>
+</div>
+<div style="display: flex; align-items: center; gap: 12px; color: var(--tinta-suave); font-size: 13px; line-height: 18px; font-weight: 600"><span style="flex: 1; height: 1px; background: var(--linea)"></span>o con tu mail<span style="flex: 1; height: 1px; background: var(--linea)"></span></div>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<x-import component-from-global-scope="PX.TextField" label="Mail" type="email" placeholder="vos@mail.com"></x-import>
+<x-import component-from-global-scope="PX.Button" variant="fantasma" full="{{yes}}" icon-right="chevron">Mandame un link para entrar</x-import>
+</div>
+<div style="background: var(--lima-tinte); border-radius: 16px; padding: 16px 20px; display: flex; flex-direction: column; gap: 4px">
+<p style="margin: 0; font-weight: 600; font-size: 15px; line-height: 20px">¿Te invitaron a un viaje?</p>
+<p style="margin: 0; font-size: 15px; line-height: 22px; color: var(--tinta-suave)">Abrí el link que te pasaron o <a href="#" style="font-weight: 600">ingresá el código</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1000}}'>
+class Component extends DCLogic {
+renderVals() {
+return { yes: true };
+}
+}
+</script>
+</body>
+</html>

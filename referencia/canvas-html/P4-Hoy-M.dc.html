@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>PX — Hoy, durante el viaje (mobile)</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/px/tokens.css">
+<link rel="stylesheet" href="ds/px/components/bundle.css">
+<script src="ds/px/components/bundle.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&amp;family=Figtree:wght@400..700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:var(--mandarina-texto)}a:hover{color:var(--tinta)}
+</style>
+</helmet>
+<div style="position: relative; width: 390px; height: 844px; overflow: hidden; background: var(--papel-hundido); color: var(--tinta); font-family: var(--font-texto)">
+<svg width="390" height="480" viewBox="0 0 390 480" role="img" aria-label="Mapa del día: ya pasaste por la cabaña, ahora estás en el Cerro Catedral y a la noche cenan en el centro" style="position: absolute; left: 0; top: 0">
+<rect width="390" height="480" style="fill: var(--papel-hundido)"></rect>
+<path d="M-10 300 C 60 250, 120 330, 200 300 S 330 230, 400 270 L 400 480 L -10 480 Z" style="fill: var(--cielo-tinte)"></path>
+<path d="M240 40 C 300 20, 360 60, 380 120 C 340 150, 280 140, 250 110 Z" style="fill: var(--lima-tinte)"></path>
+<path d="M20 120 C 50 90, 110 100, 120 150 C 90 180, 40 170, 20 120 Z" style="fill: var(--lima-tinte)"></path>
+<path d="M-10 210 L 400 170" style="fill: none; stroke: var(--papel-elevado); stroke-width: 14; stroke-linecap: round"></path>
+<path d="M150 -10 L 190 300" style="fill: none; stroke: var(--papel-elevado); stroke-width: 10; stroke-linecap: round"></path>
+<path d="M300 -10 C 290 80, 320 140, 300 260" style="fill: none; stroke: var(--papel-elevado); stroke-width: 8; stroke-linecap: round"></path>
+<path d="M70 140 C 120 160, 150 200, 170 196 S 260 150, 300 180 S 320 250, 250 280" style="fill: none; stroke: var(--mandarina); stroke-width: 6; stroke-linecap: round; stroke-dasharray: 0.1 14"></path>
+<circle cx="70" cy="140" r="12" style="fill: var(--tinta)"></circle>
+<path d="M64 140 l4 4 l8 -8" style="fill: none; stroke: var(--papel); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round"></path>
+<circle cx="300" cy="180" r="30" style="fill: var(--mandarina); opacity: 0.25"></circle>
+<circle cx="300" cy="180" r="16" style="fill: var(--mandarina); stroke: var(--papel); stroke-width: 4"></circle>
+<circle cx="250" cy="280" r="11" style="fill: var(--papel); stroke: var(--tinta); stroke-width: 4"></circle>
+<circle cx="330" cy="210" r="15" style="fill: var(--lima); stroke: var(--papel); stroke-width: 3"></circle>
+<text x="330" y="215" text-anchor="middle" style="font: 700 11px var(--font-texto); fill: var(--sobre-color)">F</text>
+<circle cx="276" cy="150" r="15" style="fill: var(--cielo); stroke: var(--papel); stroke-width: 3"></circle>
+<text x="276" y="155" text-anchor="middle" style="font: 700 11px var(--font-texto); fill: var(--sobre-color)">S</text>
+<text x="40" y="350" style="font: 600 13px var(--font-texto); fill: var(--tinta-suave)">Lago Nahuel Huapi</text>
+</svg>
+<div style="position: absolute; left: 16px; right: 16px; top: 52px; display: flex; justify-content: space-between; align-items: center; gap: 8px">
+<a href="#" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px 0 6px; border-radius: 999px; background: var(--papel-elevado); color: var(--tinta); text-decoration: none; box-shadow: var(--sombra-flotante)"><span style="font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: 0.06em; background: var(--mandarina); color: var(--sobre-color); padding: 6px 10px; border-radius: 999px">VIAJE</span><span style="font-weight: 700; font-size: 15px">Bariloche · día 3</span></a>
+<a href="#" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; border-radius: 999px; background: #b8361f; color: #ffffff; font-weight: 700; font-size: 15px; text-decoration: none; box-shadow: var(--sombra-flotante)">Emergencias</a>
+</div>
+<div style="position: absolute; left: 0; right: 0; top: 404px; bottom: 0; background: var(--papel); border-radius: 28px 28px 0 0; box-shadow: var(--sombra-flotante); padding: 10px 16px 0; display: flex; flex-direction: column; gap: 14px">
+<span aria-hidden="true" style="align-self: center; width: 40px; height: 5px; border-radius: 999px; background: var(--linea)"></span>
+<div style="display: flex; justify-content: space-between; align-items: baseline">
+<h1 style="margin: 0; font-family: var(--font-display); font-size: 30px; line-height: 32px; font-weight: 700; letter-spacing: -0.02em">Hoy</h1>
+<span style="font-size: 13px; line-height: 18px; font-weight: 600; color: var(--tinta-suave)">Sáb 16 · 2 de 4 planes</span>
+</div>
+<div>
+<x-import component-from-global-scope="PX.ItineraryItem" time="10:00" title="Subida al Cerro Catedral" place="Estás acá · Fede y Santi también" current="{{yes}}"></x-import>
+<x-import component-from-global-scope="PX.ItineraryItem" time="20:30" title="Cena en El Boliche de Alberto" place="Villegas 347 · reservado a nombre de Pedro" last="{{yes}}"></x-import>
+</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px">
+<x-import component-from-global-scope="PX.Button" variant="secundario" size="sm" icon="route">Ruta</x-import>
+<x-import component-from-global-scope="PX.Button" variant="secundario" size="sm" icon="baul">Voucher</x-import>
+<x-import component-from-global-scope="PX.Button" variant="primario" size="sm" icon="plus">Gasto</x-import>
+</div>
+</div>
+<div style="position: absolute; left: 16px; right: 16px; bottom: 20px">
+<x-import component-from-global-scope="PX.BottomNav" default-active="resumen"></x-import>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+return { yes: true };
+}
+}
+</script>
+</body>
+</html>

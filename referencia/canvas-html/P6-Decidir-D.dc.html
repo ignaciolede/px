@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>PX — Decidir (desktop)</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/px/tokens.css">
+<link rel="stylesheet" href="ds/px/components/bundle.css">
+<script src="ds/px/components/bundle.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&amp;family=Figtree:wght@400..700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:var(--mandarina-texto)}a:hover{color:var(--tinta)}
+</style>
+</helmet>
+<div style="min-height: 1000px; background: var(--papel); color: var(--tinta); font-family: var(--font-texto); display: flex; flex-wrap: wrap">
+<nav aria-label="Viaje" style="flex: 1 1 240px; max-width: 272px; background: var(--papel-hundido); padding: 28px 16px; box-sizing: border-box; display: flex; flex-direction: column; gap: 24px">
+<p style="margin: 0 0 0 12px; font-family: var(--font-display); font-size: 28px; line-height: 28px; font-weight: 800; letter-spacing: -0.03em">PX<span style="color: var(--mandarina)">.</span></p>
+<a href="#" style="display: inline-flex; align-items: center; gap: 4px; min-height: 44px; padding: 0 8px; color: var(--tinta-suave); font-weight: 600; font-size: 15px; text-decoration: none"><span style="display: inline-block; transform: scaleX(-1)"><x-import component-from-global-scope="PX.Icon" name="chevron"></x-import></span>Mis viajes</a>
+<div style="display: flex; align-items: center; gap: 12px; padding: 0 8px">
+<span style="width: 44px; height: 44px; border-radius: 14px; background: var(--lima); flex: none"></span>
+<span style="display: flex; flex-direction: column"><b style="font-size: 15px; line-height: 20px">Bariloche con los chicos</b><span style="font-size: 13px; line-height: 18px; color: var(--tinta-suave)">Faltan 23 días</span></span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<a href="#" style="display: flex; align-items: center; gap: 12px; min-height: 48px; padding: 0 16px; border-radius: 999px; color: var(--tinta); font-weight: 600; text-decoration: none"><x-import component-from-global-scope="PX.Icon" name="home"></x-import>Resumen</a>
+<a href="#" aria-current="page" style="display: flex; align-items: center; gap: 12px; min-height: 48px; padding: 0 16px; border-radius: 999px; background: var(--mandarina); color: var(--sobre-color); font-weight: 700; text-decoration: none"><x-import component-from-global-scope="PX.Icon" name="route"></x-import>Plan</a>
+<a href="#" style="display: flex; align-items: center; gap: 12px; min-height: 48px; padding: 0 16px; border-radius: 999px; color: var(--tinta); font-weight: 600; text-decoration: none"><x-import component-from-global-scope="PX.Icon" name="wallet"></x-import>Cuentas</a>
+<a href="#" style="display: flex; align-items: center; gap: 12px; min-height: 48px; padding: 0 16px; border-radius: 999px; color: var(--tinta); font-weight: 600; text-decoration: none"><x-import component-from-global-scope="PX.Icon" name="baul"></x-import>Baúl</a>
+</div>
+</nav>
+<main style="flex: 999 1 560px; min-width: 0; padding: 40px 48px 64px; box-sizing: border-box; display: flex; flex-direction: column; gap: 28px; max-width: 1220px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 20px">
+<h1 style="margin: 0; font-family: var(--font-display); font-size: 44px; line-height: 48px; font-weight: 700; letter-spacing: -0.03em">Plan</h1>
+<div style="display: flex; gap: 8px">
+<x-import component-from-global-scope="PX.Chip" selected="{{yes}}" tone="previaje">Decidir · 2 abiertas</x-import>
+<x-import component-from-global-scope="PX.Chip">Itinerario</x-import>
+<x-import component-from-global-scope="PX.Chip">Mapa</x-import>
+</div>
+</div>
+<x-import component-from-global-scope="PX.Button" variant="primario" icon="plus">Nueva votación</x-import>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start">
+<div style="flex: 1 1 280px; min-width: 0; display: flex; flex-direction: column; gap: 10px">
+<p style="margin: 0; font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: 0.06em; color: var(--tinta-suave)">ABIERTAS</p>
+<a href="#" aria-current="true" style="display: flex; flex-direction: column; gap: 6px; padding: 18px; border-radius: 20px; background: var(--papel-elevado); border: 2px solid var(--tinta); color: var(--tinta); text-decoration: none"><b style="font-size: 17px; line-height: 22px">¿Dónde dormimos?</b><span style="font-size: 13px; line-height: 18px; color: var(--tinta-suave)">3 opciones · 4 de 6 votaron · cierra vie</span></a>
+<a href="#" style="display: flex; flex-direction: column; gap: 6px; padding: 18px; border-radius: 20px; background: var(--papel-elevado); box-shadow: var(--sombra-card); color: var(--tinta); text-decoration: none"><b style="font-size: 17px; line-height: 22px">¿Alquilamos auto?</b><span style="font-size: 13px; line-height: 18px; color: var(--tinta-suave)">2 opciones · ya votaste</span></a>
+<p style="margin: 14px 0 0; font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: 0.06em; color: var(--tinta-suave)">DECIDIDAS</p>
+<a href="#" style="display: flex; align-items: center; gap: 10px; padding: 16px 18px; border-radius: 20px; background: var(--papel-hundido); color: var(--tinta); text-decoration: none"><span style="flex: 1; display: flex; flex-direction: column"><b style="font-size: 16px; line-height: 22px">Destino</b><span style="font-size: 13px; line-height: 18px; color: var(--positivo); font-weight: 600">Bariloche, 5 de 6</span></span><x-import component-from-global-scope="PX.Icon" name="check"></x-import></a>
+<a href="#" style="display: flex; align-items: center; gap: 10px; padding: 16px 18px; border-radius: 20px; background: var(--papel-hundido); color: var(--tinta); text-decoration: none"><span style="flex: 1; display: flex; flex-direction: column"><b style="font-size: 16px; line-height: 22px">Fechas</b><span style="font-size: 13px; line-height: 18px; color: var(--positivo); font-weight: 600">14 al 21 de enero</span></span><x-import component-from-global-scope="PX.Icon" name="check"></x-import></a>
+</div>
+<section style="flex: 2 1 480px; min-width: 0; border-radius: 32px; background: var(--papel-elevado); box-shadow: var(--sombra-card); overflow: hidden">
+<div style="position: relative; overflow: hidden; background: var(--lima); color: var(--sobre-color); padding: 28px 32px; display: flex; flex-direction: column; gap: 14px">
+<svg width="360" height="180" viewBox="0 0 360 180" aria-hidden="true" style="position: absolute; right: -10px; top: -10px"><path d="M10 160 C 90 160, 120 40, 210 60 S 330 120, 350 20" style="fill: none; stroke: var(--sobre-color); stroke-width: 6; stroke-linecap: round; stroke-dasharray: 0.1 16; opacity: 0.3"></path></svg>
+<span style="position: relative; font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: 0.06em">PROPUSO FEDE · CIERRA EL VIERNES 11</span>
+<h2 style="position: relative; margin: 0; font-family: var(--font-display); font-size: 64px; line-height: 60px; font-weight: 800; letter-spacing: -0.04em">¿Dónde dormimos?</h2>
+<div style="position: relative; display: flex; align-items: center; gap: 12px">
+<span aria-hidden="true" style="display: flex; gap: 6px"><span style="width: 18px; height: 18px; border-radius: 50%; background: var(--sobre-color)"></span><span style="width: 18px; height: 18px; border-radius: 50%; background: var(--sobre-color)"></span><span style="width: 18px; height: 18px; border-radius: 50%; background: var(--sobre-color)"></span><span style="width: 18px; height: 18px; border-radius: 50%; border: 2px solid var(--sobre-color); box-sizing: border-box"></span></span>
+<span style="font-size: 16px; line-height: 22px; font-weight: 600">Con 4 votos pasa al plan. La cabaña está a un voto.</span>
+</div>
+</div>
+<div style="padding: 24px 32px 28px; display: flex; flex-direction: column; gap: 10px">
+<x-import component-from-global-scope="PX.PollOption" label="Cabaña Los Coihues" detail="$ 38.000 la noche · 4 km del centro · votaron Fede, Tomi y Pedro" votes="{{three}}" total="{{six}}"></x-import>
+<x-import component-from-global-scope="PX.PollOption" label="Hostel del Lago" detail="$ 22.000 la noche · centro · votó Juan Cruz" votes="{{one}}" total="{{six}}"></x-import>
+<x-import component-from-global-scope="PX.PollOption" label="Depto. en Melipal" detail="$ 31.000 la noche · propuso Santi" votes="{{zero}}" total="{{six}}"></x-import>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; padding-top: 10px; border-top: 1px solid var(--linea); margin-top: 6px">
+<span style="display: flex; align-items: center; gap: 10px; font-size: 14px; line-height: 20px; color: var(--tinta-suave)"><x-import component-from-global-scope="PX.AvatarStack" people="{{faltan}}"></x-import>Faltan vos y Santi</span>
+<div style="display: flex; gap: 8px">
+<x-import component-from-global-scope="PX.Button" variant="fantasma" icon="plus">Proponer otra</x-import>
+<x-import component-from-global-scope="PX.Button" variant="secundario">Cerrar antes</x-import>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1000}}'>
+class Component extends DCLogic {
+renderVals() {
+return { yes: true, six: 6, three: 3, one: 1, zero: 0, faltan: ['Nacho', 'Santi'] };
+}
+}
+</script>
+</body>
+</html>

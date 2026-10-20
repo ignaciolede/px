@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>PX — Unirse a un viaje (mobile)</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/px/tokens.css">
+<link rel="stylesheet" href="ds/px/components/bundle.css">
+<script src="ds/px/components/bundle.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&amp;family=Figtree:wght@400..700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:var(--mandarina-texto)}a:hover{color:var(--tinta)}
+</style>
+</helmet>
+<div style="position: relative; width: 390px; height: 844px; overflow: hidden; background: var(--papel); color: var(--tinta); font-family: var(--font-texto)">
+<div style="padding: 48px 16px 40px; display: flex; flex-direction: column; gap: 22px">
+<div style="display: flex; justify-content: space-between; align-items: center">
+<x-import component-from-global-scope="PX.Button" variant="fantasma" size="sm">Cerrar</x-import>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<h1 style="margin: 0; font-family: var(--font-display); font-size: 40px; line-height: 42px; font-weight: 800; letter-spacing: -0.03em">Sumate al viaje</h1>
+<p style="margin: 0; font-size: 16px; line-height: 23px; color: var(--tinta-suave)">Poné el código que te pasaron o escaneá el QR.</p>
+</div>
+<div role="group" aria-label="Código de 6 caracteres" style="display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 8px">
+<span style="height: 60px; border-radius: 14px; background: var(--papel-elevado); border: 2px solid var(--tinta); display: grid; place-items: center; font-family: var(--font-display); font-size: 30px; font-weight: 800">B</span>
+<span style="height: 60px; border-radius: 14px; background: var(--papel-elevado); border: 2px solid var(--tinta); display: grid; place-items: center; font-family: var(--font-display); font-size: 30px; font-weight: 800">R</span>
+<span style="height: 60px; border-radius: 14px; background: var(--papel-elevado); border: 2px solid var(--tinta); display: grid; place-items: center; font-family: var(--font-display); font-size: 30px; font-weight: 800">C</span>
+<span style="height: 60px; border-radius: 14px; background: var(--papel-elevado); border: 2px solid var(--tinta); display: grid; place-items: center; font-family: var(--font-display); font-size: 30px; font-weight: 800">4</span>
+<span style="height: 60px; border-radius: 14px; background: var(--papel-elevado); border: 2px solid var(--tinta); display: grid; place-items: center; font-family: var(--font-display); font-size: 30px; font-weight: 800">K</span>
+<span style="height: 60px; border-radius: 14px; background: var(--papel-elevado); border: 2px solid var(--tinta); display: grid; place-items: center; font-family: var(--font-display); font-size: 30px; font-weight: 800">9</span>
+</div>
+<x-import component-from-global-scope="PX.Button" variant="secundario" full="{{yes}}">Escanear QR</x-import>
+<div style="position: relative; overflow: hidden; border-radius: 28px; background: var(--lima); color: var(--sobre-color); padding: 22px; display: flex; flex-direction: column; gap: 14px">
+<svg width="200" height="140" viewBox="0 0 200 140" aria-hidden="true" style="position: absolute; right: -20px; top: -10px"><path d="M10 130 C 60 130, 70 50, 130 60 S 190 100, 190 20" style="fill: none; stroke: var(--sobre-color); stroke-width: 5; stroke-linecap: round; stroke-dasharray: 0.1 13; opacity: 0.4"></path></svg>
+<span style="position: relative; font-size: 14px; line-height: 20px; font-weight: 600">Fede te sumó a</span>
+<span style="position: relative; font-family: var(--font-display); font-size: 34px; line-height: 36px; font-weight: 800; letter-spacing: -0.02em">Bariloche con los chicos</span>
+<span style="position: relative; display: flex; align-items: center; justify-content: space-between; gap: 10px">
+<span style="font-size: 15px; line-height: 20px; font-weight: 600">14–21 ene · ya van 5</span>
+<x-import component-from-global-scope="PX.AvatarStack" people="{{van}}" max="{{four}}"></x-import>
+</span>
+</div>
+<x-import component-from-global-scope="PX.Button" variant="primario" full="{{yes}}">Sumarme al viaje</x-import>
+<p style="margin: 0; text-align: center; font-size: 14px; line-height: 20px; color: var(--tinta-suave)">Vas a ver todo y podés votar. Para borrar cosas hace falta ser organizador.</p>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+return { yes: true, four: 4, van: ['Fede', 'Santi', 'Juan Cruz', 'Pedro', 'Tomi'] };
+}
+}
+</script>
+</body>
+</html>

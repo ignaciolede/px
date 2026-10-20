@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>PX — Resumen Post-viaje (desktop)</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/px/tokens.css">
+<link rel="stylesheet" href="ds/px/components/bundle.css">
+<script src="ds/px/components/bundle.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&amp;family=Figtree:wght@400..700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:var(--mandarina-texto)}a:hover{color:var(--tinta)}
+</style>
+</helmet>
+<div style="min-height: 1000px; background: var(--papel); color: var(--tinta); font-family: var(--font-texto); display: flex; flex-wrap: wrap">
+<nav aria-label="Viaje" style="flex: 1 1 240px; max-width: 272px; background: var(--papel-hundido); padding: 28px 16px; box-sizing: border-box; display: flex; flex-direction: column; gap: 24px">
+<p style="margin: 0 0 0 12px; font-family: var(--font-display); font-size: 28px; line-height: 28px; font-weight: 800; letter-spacing: -0.03em">PX<span style="color: var(--mandarina)">.</span></p>
+<a href="#" style="display: inline-flex; align-items: center; gap: 4px; min-height: 44px; padding: 0 8px; color: var(--tinta-suave); font-weight: 600; font-size: 15px; text-decoration: none"><span style="display: inline-block; transform: scaleX(-1)"><x-import component-from-global-scope="PX.Icon" name="chevron"></x-import></span>Mis viajes</a>
+<div style="display: flex; align-items: center; gap: 12px; padding: 0 8px">
+<span style="width: 44px; height: 44px; border-radius: 14px; background: var(--cielo); flex: none"></span>
+<span style="display: flex; flex-direction: column"><b style="font-size: 15px; line-height: 20px">Bariloche con los chicos</b><span style="font-size: 13px; line-height: 18px; color: var(--tinta-suave)">Volvieron hace 2 días</span></span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<a href="#" aria-current="page" style="display: flex; align-items: center; gap: 12px; min-height: 48px; padding: 0 16px; border-radius: 999px; background: var(--mandarina); color: var(--sobre-color); font-weight: 700; text-decoration: none"><x-import component-from-global-scope="PX.Icon" name="home"></x-import>Resumen</a>
+<a href="#" style="display: flex; align-items: center; gap: 12px; min-height: 48px; padding: 0 16px; border-radius: 999px; color: var(--tinta); font-weight: 600; text-decoration: none"><x-import component-from-global-scope="PX.Icon" name="route"></x-import>Plan</a>
+<a href="#" style="display: flex; align-items: center; gap: 12px; min-height: 48px; padding: 0 16px; border-radius: 999px; color: var(--tinta); font-weight: 600; text-decoration: none"><x-import component-from-global-scope="PX.Icon" name="wallet"></x-import>Cuentas</a>
+<a href="#" style="display: flex; align-items: center; gap: 12px; min-height: 48px; padding: 0 16px; border-radius: 999px; color: var(--tinta); font-weight: 600; text-decoration: none"><x-import component-from-global-scope="PX.Icon" name="baul"></x-import>Baúl</a>
+</div>
+</nav>
+<main style="flex: 999 1 560px; min-width: 0; padding: 40px 48px 64px; box-sizing: border-box; display: flex; flex-direction: column; gap: 32px; max-width: 1220px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px">
+<x-import component-from-global-scope="PX.StageSwitch" default-value="post"></x-import>
+<x-import component-from-global-scope="PX.AvatarStack" people="{{chicos}}" max="{{six}}"></x-import>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 20px">
+<section style="flex: 1 1 400px; position: relative; overflow: hidden; padding: 32px; box-sizing: border-box; border-radius: 32px; background: var(--cielo); color: var(--sobre-color); display: flex; flex-direction: column; gap: 20px; justify-content: space-between; min-height: 380px">
+<svg width="300" height="200" viewBox="0 0 300 200" aria-hidden="true" style="position: absolute; right: -20px; top: -20px"><path d="M10 180 C 80 180, 110 60, 190 80 S 280 140, 290 30" style="fill: none; stroke: var(--sobre-color); stroke-width: 6; stroke-linecap: round; stroke-dasharray: 0.1 16; opacity: 0.35"></path><circle cx="290" cy="30" r="10" style="fill: var(--papel); stroke: var(--sobre-color); stroke-width: 4"></circle></svg>
+<p style="position: relative; margin: 0; font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: 0.06em">TU SALDO</p>
+<div style="position: relative; display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 24px; line-height: 30px; font-weight: 600">Te falta poner</span>
+<span style="font-family: var(--font-display); font-size: 104px; line-height: 96px; font-weight: 800; letter-spacing: -0.05em; font-variant-numeric: tabular-nums">$ 12.400</span>
+<span style="font-size: 24px; line-height: 30px; font-weight: 600">para quedar a mano con Fede.</span>
+</div>
+<div style="position: relative; display: flex; flex-wrap: wrap; gap: 10px">
+<x-import component-from-global-scope="PX.Button" variant="primario">Copiar alias de Fede</x-import>
+<x-import component-from-global-scope="PX.Button" variant="secundario">Ya le pagué</x-import>
+</div>
+</section>
+<section style="flex: 1 1 340px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; justify-content: space-between; align-items: baseline">
+<h2 style="margin: 0; font-family: var(--font-display); font-size: 24px; line-height: 28px; font-weight: 700">Así quedan las cuentas</h2>
+<a href="#" style="font-weight: 600; font-size: 15px">Ver gastos</a>
+</div>
+<div style="display: flex; align-items: center; gap: 10px; padding: 12px 16px; border-radius: 16px; background: var(--cielo-tinte); font-size: 14px; line-height: 20px"><x-import component-from-global-scope="PX.Icon" name="route"></x-import><span>Simplificamos: <b>4 transferencias</b> en vez de 11.</span></div>
+<x-import component-from-global-scope="PX.BalanceRow" name="Fede" amount="{{fede}}"></x-import>
+<x-import component-from-global-scope="PX.BalanceRow" name="Tomi" amount="{{tomi}}"></x-import>
+<x-import component-from-global-scope="PX.BalanceRow" name="Santi" amount="{{zero}}"></x-import>
+<x-import component-from-global-scope="PX.BalanceRow" name="Juan Cruz" amount="{{zero}}"></x-import>
+<x-import component-from-global-scope="PX.BalanceRow" name="Pedro" amount="{{zero}}"></x-import>
+</section>
+</div>
+<section style="display: flex; flex-direction: column; gap: 14px">
+<h2 style="margin: 0; font-family: var(--font-display); font-size: 26px; line-height: 30px; font-weight: 700">El viaje en números</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<div style="flex: 2 1 320px; padding: 24px; border-radius: 28px; background: var(--tinta); color: var(--papel); display: flex; flex-direction: column; gap: 4px; justify-content: flex-end; min-height: 160px"><span style="font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: 0.06em; opacity: 0.85">GASTARON ENTRE TODOS</span><span style="font-family: var(--font-display); font-size: 56px; line-height: 56px; font-weight: 800; letter-spacing: -0.03em; font-variant-numeric: tabular-nums">$ 1.842.000</span><span style="font-size: 14px; line-height: 20px; opacity: 0.85">$ 307.000 por persona · lo que más pesó: la cabaña</span></div>
+<div style="flex: 1 1 150px; padding: 24px; border-radius: 28px; background: var(--lima); color: var(--sobre-color); display: flex; flex-direction: column; justify-content: flex-end; min-height: 160px"><span style="font-family: var(--font-display); font-size: 64px; line-height: 60px; font-weight: 800">23</span><span style="font-size: 15px; line-height: 20px; font-weight: 600">lugares visitados</span></div>
+<div style="flex: 1 1 150px; padding: 24px; border-radius: 28px; background: var(--mandarina); color: var(--sobre-color); display: flex; flex-direction: column; justify-content: flex-end; min-height: 160px"><span style="font-family: var(--font-display); font-size: 64px; line-height: 60px; font-weight: 800">41</span><span style="font-size: 15px; line-height: 20px; font-weight: 600">gastos cargados</span></div>
+<div style="flex: 1 1 150px; padding: 24px; border-radius: 28px; background: var(--papel-elevado); box-shadow: var(--sombra-card); display: flex; flex-direction: column; justify-content: flex-end; gap: 4px; min-height: 160px"><span style="font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: 0.06em; color: var(--tinta-suave)">EL MÁS ORGANIZADO</span><span style="font-family: var(--font-display); font-size: 32px; line-height: 36px; font-weight: 700">Pedro</span><span style="font-size: 13px; line-height: 18px; color: var(--tinta-suave)">cargó 17 gastos</span></div>
+</div>
+</section>
+<section style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; padding: 24px 28px; border-radius: 28px; background: var(--lima-tinte)">
+<div style="display: flex; flex-direction: column; gap: 4px"><h2 style="margin: 0; font-family: var(--font-display); font-size: 26px; line-height: 30px; font-weight: 700">¿Repetimos?</h2><span style="font-size: 15px; line-height: 22px; color: var(--tinta-suave)">Arranca un viaje nuevo en Previaje con lo que elijas.</span></div>
+<div style="display: flex; flex-wrap: wrap; gap: 10px">
+<x-import component-from-global-scope="PX.Button" variant="secundario">Mismo grupo, otro destino</x-import>
+<x-import component-from-global-scope="PX.Button" variant="secundario">Mismo destino, otra fecha</x-import>
+</div>
+</section>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1000}}'>
+class Component extends DCLogic {
+renderVals() {
+return { six: 6, fede: -12400, tomi: 8150, zero: 0, chicos: ['Nacho', 'Fede', 'Santi', 'Juan Cruz', 'Pedro', 'Tomi'] };
+}
+}
+</script>
+</body>
+</html>

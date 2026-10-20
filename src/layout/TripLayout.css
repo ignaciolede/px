@@ -1,0 +1,176 @@
+/* TripLayout — chrome de navegación de un viaje.
+   El header de cada pantalla (hero teñido en Resumen, título simple en Plan/Cuentas/Baúl)
+   lo arma la propia pantalla; este layout solo resuelve ir de una sección a otra. */
+
+.trip {
+  min-height: 100vh;
+  background: var(--papel);
+}
+
+.trip__main {
+  min-height: 100vh;
+  padding-bottom: calc(var(--nav-alto) + var(--espacio-8) * 2);
+}
+.trip__main--sin-nav { padding-bottom: 0; }
+
+/* Botón de Emergencias — fijo en mobile mientras dura Viaje. #b8361f es la única excepción de marca del diseño. */
+.trip__emergencias-mobile {
+  position: fixed;
+  top: var(--espacio-4);
+  right: var(--espacio-4);
+  z-index: 20;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--espacio-2);
+  height: var(--toque-min);
+  padding: 0 var(--espacio-4);
+  border: 0;
+  border-radius: var(--radio-pill);
+  background: #b8361f;
+  color: #ffffff;
+  font: 600 14px/20px var(--font-texto);
+  box-shadow: var(--sombra-flotante);
+  cursor: pointer;
+}
+
+/* Nav flotante — reusa BottomNav tal cual, solo la posicionamos. */
+.trip__nav-mobile {
+  position: fixed;
+  left: 50%;
+  bottom: var(--espacio-4);
+  transform: translateX(-50%);
+  z-index: 15;
+  width: calc(100% - var(--espacio-4) * 2);
+}
+
+/* Sidebar de escritorio */
+.trip__sidebar {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .trip { display: flex; }
+
+  .trip__nav-mobile { display: none; }
+  .trip__emergencias-mobile { display: none; }
+
+  .trip__sidebar {
+    display: flex;
+    flex-direction: column;
+    flex: none;
+    width: 240px;
+    min-height: 100vh;
+    padding: var(--espacio-6) var(--espacio-4);
+    background: var(--papel-hundido);
+    box-sizing: border-box;
+    gap: var(--espacio-6);
+  }
+
+  .trip__marca {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--tinta);
+  }
+  .trip__marca-punto { color: var(--mandarina); }
+
+  .trip__volver {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--espacio-1);
+    align-self: flex-start;
+    border: 0;
+    background: transparent;
+    padding: var(--espacio-1) 0;
+    color: var(--tinta-suave);
+    font: 600 14px/20px var(--font-texto);
+    cursor: pointer;
+  }
+  .trip__volver:hover { color: var(--tinta); }
+  .trip__volver-icon { transform: rotate(180deg); }
+
+  .trip__card {
+    display: flex;
+    align-items: center;
+    gap: var(--espacio-3);
+    padding: var(--espacio-2) 0;
+  }
+  .trip__card-color {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radio-md);
+    flex: none;
+  }
+  .trip__card-titulo { font: 600 15px/20px var(--font-texto); color: var(--tinta); }
+  .trip__card-meta { margin-top: 2px; font: 500 13px/18px var(--font-texto); color: var(--tinta-suave); }
+
+  .trip__nav {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacio-1);
+  }
+  .trip__nav-item {
+    display: flex;
+    align-items: center;
+    gap: var(--espacio-3);
+    height: var(--toque-min);
+    padding: 0 var(--espacio-3);
+    border: 0;
+    border-radius: var(--radio-pill);
+    background: transparent;
+    color: var(--tinta);
+    font: 600 15px/20px var(--font-texto);
+    cursor: pointer;
+    text-align: left;
+  }
+  .trip__nav-item:hover { background: var(--papel-elevado); }
+  .trip__nav-item--on,
+  .trip__nav-item--on:hover { background: var(--mandarina); color: var(--sobre-color); }
+  .trip__nav-badge {
+    margin-left: auto;
+    min-width: 22px;
+    height: 22px;
+    padding: 0 6px;
+    border-radius: var(--radio-pill);
+    background: var(--lima);
+    color: var(--sobre-color);
+    font: 700 12px/22px var(--font-texto);
+    text-align: center;
+  }
+  .trip__nav-item--on .trip__nav-badge { background: var(--papel); color: var(--tinta); }
+
+  .trip__spacer { flex: 1; }
+
+  .trip__emergencias-desk {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--espacio-2);
+    min-height: var(--control-md);
+    padding: 0 var(--espacio-4);
+    border: 0;
+    border-radius: var(--radio-pill);
+    background: #b8361f;
+    color: #ffffff;
+    font: 600 15px/20px var(--font-texto);
+    cursor: pointer;
+  }
+
+  .trip__grupo {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacio-2);
+    padding: var(--espacio-4);
+    border: 1px solid var(--linea);
+    border-radius: var(--radio-md);
+    background: var(--papel-elevado);
+    color: inherit;
+    text-align: left;
+    cursor: pointer;
+  }
+  .trip__grupo-titulo { font: 600 15px/20px var(--font-texto); }
+  .trip__grupo-caption { color: var(--tinta-suave); font: 500 13px/18px var(--font-texto); }
+
+  .trip__main { flex: 1; min-width: 0; padding-bottom: 0; }
+}

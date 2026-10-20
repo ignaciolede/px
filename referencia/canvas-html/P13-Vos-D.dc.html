@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>PX — Vos (desktop)</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/px/tokens.css">
+<link rel="stylesheet" href="ds/px/components/bundle.css">
+<script src="ds/px/components/bundle.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&amp;family=Figtree:wght@400..700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:var(--mandarina-texto)}a:hover{color:var(--tinta)}
+</style>
+</helmet>
+<div style="min-height: 1000px; background: var(--papel); color: var(--tinta); font-family: var(--font-texto); display: flex; flex-wrap: wrap">
+<nav aria-label="Principal" style="flex: 1 1 240px; max-width: 280px; background: var(--papel-hundido); padding: 32px 20px; box-sizing: border-box; display: flex; flex-direction: column; gap: 28px">
+<p style="margin: 0 0 8px 12px; font-family: var(--font-display); font-size: 30px; line-height: 30px; font-weight: 800; letter-spacing: -0.03em">PX<span style="color: var(--mandarina)">.</span></p>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<a href="#" style="display: flex; align-items: center; gap: 12px; min-height: 48px; padding: 0 16px; border-radius: 999px; color: var(--tinta); font-weight: 600; text-decoration: none"><x-import component-from-global-scope="PX.Icon" name="route"></x-import>Mis viajes</a>
+<a href="#" aria-current="page" style="display: flex; align-items: center; gap: 12px; min-height: 48px; padding: 0 16px; border-radius: 999px; background: var(--mandarina); color: var(--sobre-color); font-weight: 700; text-decoration: none"><x-import component-from-global-scope="PX.Icon" name="user"></x-import>Vos</a>
+</div>
+<a href="#" style="margin-top: auto; padding: 0 16px; min-height: 44px; display: flex; align-items: center; color: var(--tinta-suave); font-weight: 600; font-size: 15px">Cerrar sesión</a>
+</nav>
+<main style="flex: 999 1 560px; min-width: 0; padding: 48px 56px 64px; box-sizing: border-box; display: flex; flex-direction: column; gap: 28px; max-width: 1220px">
+<div style="display: flex; flex-wrap: wrap; gap: 20px">
+<section style="flex: 1 1 380px; position: relative; overflow: hidden; border-radius: 32px; background: var(--lima); color: var(--sobre-color); padding: 32px; box-sizing: border-box; display: flex; flex-direction: column; gap: 24px; min-height: 300px; justify-content: space-between">
+<svg width="320" height="220" viewBox="0 0 320 220" aria-hidden="true" style="position: absolute; right: -20px; top: -10px"><path d="M10 200 C 90 200, 110 70, 200 90 S 300 150, 310 30" style="fill: none; stroke: var(--sobre-color); stroke-width: 6; stroke-linecap: round; stroke-dasharray: 0.1 16; opacity: 0.4"></path><circle cx="310" cy="30" r="10" style="fill: var(--papel); stroke: var(--sobre-color); stroke-width: 4"></circle></svg>
+<span style="position: relative; width: 104px; height: 104px; border-radius: 50%; background: var(--tinta); color: var(--lima); display: grid; place-items: center; font-family: var(--font-display); font-size: 52px; font-weight: 800">N</span>
+<div style="position: relative; display: flex; flex-direction: column; gap: 4px">
+<h1 style="margin: 0; font-family: var(--font-display); font-size: 64px; line-height: 60px; font-weight: 800; letter-spacing: -0.04em">Nacho</h1>
+<span style="font-size: 17px; line-height: 24px; font-weight: 600">Salís de Buenos Aires · pagás en pesos</span>
+</div>
+</section>
+<div style="flex: 1 1 340px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px">
+<div style="padding: 22px; border-radius: 28px; background: var(--tinta); color: var(--papel); display: flex; flex-direction: column; justify-content: flex-end"><span style="font-family: var(--font-display); font-size: 64px; line-height: 60px; font-weight: 800">4</span><span style="font-size: 15px; line-height: 20px">viajes con PX</span></div>
+<div style="padding: 22px; border-radius: 28px; background: var(--mandarina); color: var(--sobre-color); display: flex; flex-direction: column; justify-content: flex-end"><span style="font-family: var(--font-display); font-size: 64px; line-height: 60px; font-weight: 800">31</span><span style="font-size: 15px; line-height: 20px">lugares visitados</span></div>
+<div style="padding: 22px; border-radius: 28px; background: var(--cielo); color: var(--sobre-color); display: flex; flex-direction: column; justify-content: flex-end"><span style="font-family: var(--font-display); font-size: 64px; line-height: 60px; font-weight: 800">3</span><span style="font-size: 15px; line-height: 20px">provincias</span></div>
+<div style="padding: 22px; border-radius: 28px; background: var(--papel-elevado); box-shadow: var(--sombra-card); display: flex; flex-direction: column; justify-content: flex-end; gap: 4px"><span style="font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: 0.06em; color: var(--tinta-suave)">ÚLTIMO</span><b style="font-family: var(--font-display); font-size: 24px; line-height: 28px">Mar de las Pampas</b></div>
+</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px">
+<section style="display: flex; flex-direction: column; gap: 12px; padding: 22px; border-radius: 24px; background: var(--papel-elevado); box-shadow: var(--sombra-card)">
+<h2 style="margin: 0; font-family: var(--font-display); font-size: 22px; line-height: 26px; font-weight: 700">Cómo viajás</h2>
+<span style="font-size: 14px; line-height: 20px; color: var(--tinta-suave)">Lo usamos para sugerir opciones cuando el grupo propone.</span>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<x-import component-from-global-scope="PX.Chip" selected="{{yes}}">Hasta $ 40.000 la noche</x-import>
+<x-import component-from-global-scope="PX.Chip" selected="{{yes}}">Ritmo tranqui</x-import>
+<x-import component-from-global-scope="PX.Chip" icon="plus">Comida y alergias</x-import>
+</div>
+</section>
+<section style="display: flex; flex-direction: column; gap: 12px; padding: 22px; border-radius: 24px; background: var(--papel-elevado); box-shadow: var(--sombra-card)">
+<h2 style="margin: 0; font-family: var(--font-display); font-size: 22px; line-height: 26px; font-weight: 700">Documentos</h2>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 10px"><b style="font-size: 16px">DNI</b><span style="font-size: 12px; line-height: 16px; font-weight: 700; background: var(--aviso-relleno); color: var(--sobre-color); padding: 3px 8px; border-radius: 999px">Vence en marzo</span></div>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 10px"><b style="font-size: 16px">Pasaporte</b><span style="font-size: 14px; color: var(--positivo); font-weight: 600">Vigente</span></div>
+<a href="#" style="font-weight: 600; font-size: 15px">Agregar documento</a>
+</section>
+<section style="display: flex; flex-direction: column; gap: 12px; padding: 22px; border-radius: 24px; background: var(--papel-elevado); box-shadow: var(--sombra-card)">
+<h2 style="margin: 0; font-family: var(--font-display); font-size: 22px; line-height: 26px; font-weight: 700">Tu color</h2>
+<span style="font-size: 14px; line-height: 20px; color: var(--tinta-suave)">Así te reconocen en los avatares y el mapa.</span>
+<div style="display: flex; gap: 10px">
+<button type="button" aria-pressed="true" aria-label="Lima" style="width: 44px; height: 44px; border-radius: 50%; border: 3px solid var(--tinta); background: var(--lima)"></button>
+<button type="button" aria-pressed="false" aria-label="Mandarina" style="width: 44px; height: 44px; border-radius: 50%; border: 0; background: var(--mandarina)"></button>
+<button type="button" aria-pressed="false" aria-label="Cielo" style="width: 44px; height: 44px; border-radius: 50%; border: 0; background: var(--cielo)"></button>
+<button type="button" aria-pressed="false" aria-label="Arena" style="width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid var(--linea-fuerte); background: var(--papel-hundido)"></button>
+</div>
+</section>
+<section style="display: flex; flex-direction: column; gap: 10px; padding: 22px; border-radius: 24px; background: var(--papel-elevado); box-shadow: var(--sombra-card)">
+<h2 style="margin: 0; font-family: var(--font-display); font-size: 22px; line-height: 26px; font-weight: 700">Salida y moneda</h2>
+<span style="font-size: 15px; line-height: 22px">Aeroparque y Ezeiza · Pesos argentinos</span>
+<a href="#" style="font-weight: 600; font-size: 15px">Cambiar</a>
+</section>
+<section style="display: flex; flex-direction: column; gap: 10px; padding: 22px; border-radius: 24px; background: var(--papel-elevado); box-shadow: var(--sombra-card)">
+<h2 style="margin: 0; font-family: var(--font-display); font-size: 22px; line-height: 26px; font-weight: 700">Privacidad</h2>
+<span style="font-size: 15px; line-height: 22px">Ubicación en vivo: te preguntamos en cada viaje. Tu historial lo ve solo tu grupo.</span>
+<a href="#" style="font-weight: 600; font-size: 15px">Ajustar</a>
+</section>
+<section style="display: flex; flex-direction: column; gap: 10px; padding: 22px; border-radius: 24px; background: var(--papel-hundido)">
+<h2 style="margin: 0; font-family: var(--font-display); font-size: 22px; line-height: 26px; font-weight: 700">Cuenta</h2>
+<span style="font-size: 15px; line-height: 22px">Entrás con Google · nacho@[tu-mail]</span>
+<a href="#" style="font-weight: 600; font-size: 15px; color: var(--negativo)">Borrar mi cuenta</a>
+</section>
+</div>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1000}}'>
+class Component extends DCLogic {
+renderVals() {
+return { yes: true };
+}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+/* P10 · Crear viaje — src/screens/CrearViaje.jsx */
+
+.cv { padding: var(--espacio-4); max-width: 560px; display: flex; flex-direction: column; gap: var(--espacio-5); }
+
+.cv__cancelar { align-self: flex-start; border: 0; background: transparent; padding: var(--espacio-2) 0; font: 600 15px/20px var(--font-texto); color: var(--tinta); cursor: pointer; }
+.cv__cancelar--desk { display: none; }
+
+.cv__sobretitulo { color: var(--tinta-suave); }
+.cv__bajada { margin-top: var(--espacio-1); color: var(--tinta-suave); }
+
+.cv__campo { display: flex; flex-direction: column; gap: var(--espacio-2); }
+.cv__label { font: 600 15px/20px var(--font-texto); }
+.cv__input {
+  min-height: var(--control-md);
+  padding: 0 var(--espacio-4);
+  border-radius: var(--radio-sm);
+  border: 1.5px solid var(--linea-fuerte);
+  background: var(--papel-elevado);
+  color: var(--tinta);
+  font: 400 16px/24px var(--font-texto);
+  box-sizing: border-box;
+}
+.cv__input:focus-visible { outline: 2px solid var(--foco); outline-offset: 2px; }
+.cv__fechas { display: flex; gap: var(--espacio-3); }
+.cv__fecha { flex: 1; padding: var(--espacio-3) var(--espacio-4); border-radius: var(--radio-sm); border: 1.5px solid var(--linea-fuerte); background: var(--papel-elevado); }
+.cv__fecha-label { color: var(--tinta-suave); }
+.cv__fecha-valor { display: block; margin-top: 2px; font: 700 18px/24px var(--font-texto); }
+
+.cv__nota { color: var(--tinta-suave); }
+
+.cv__con-quien { display: flex; gap: var(--espacio-2); }
+
+.cv__preview { display: none; }
+
+.cv__pie { display: flex; align-items: center; gap: var(--espacio-3); }
+.cv__pie-cancelar { display: none; }
+
+@media (min-width: 1024px) {
+  .cv-layout { display: flex; gap: var(--espacio-8); align-items: flex-start; max-width: 1100px; }
+  .cv { max-width: 480px; }
+  .cv__cancelar { display: none; }
+
+  .cv__preview { display: block; flex: 1 1 360px; min-width: 0; }
+  .cv__preview-card { border-radius: var(--radio-lg); overflow: hidden; background: var(--lima-tinte); padding: var(--espacio-6); display: flex; flex-direction: column; gap: var(--espacio-2); }
+  .cv__preview-label { color: var(--tinta-suave); }
+  .cv__preview-titulo { font-family: var(--font-display); font-size: 56px; line-height: 58px; font-weight: 800; letter-spacing: -0.02em; }
+  .cv__preview-nota { margin-top: var(--espacio-3); color: var(--tinta-suave); }
+
+  .cv__pie-cancelar { display: inline-flex; border: 0; background: transparent; font: 600 15px/20px var(--font-texto); color: var(--tinta); cursor: pointer; }
+}

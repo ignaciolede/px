@@ -1,0 +1,61 @@
+/* P1 · Ingreso — src/screens/Ingreso.jsx
+   Pantalla a sangre, sin layout compartido: es el punto de entrada. */
+
+.ing { min-height: 100vh; background: var(--papel); color: var(--tinta); display: flex; flex-direction: column; }
+
+.ing__lado,
+.ing__form-wrap { display: none; }
+
+.ing__mobile-wrap { display: flex; flex-direction: column; min-height: 100vh; }
+
+.ing__arte { position: relative; }
+.ing__arte svg { display: block; width: 100%; height: auto; }
+
+.ing__texto { padding: var(--espacio-6) var(--espacio-6) 0; display: flex; flex-direction: column; gap: var(--espacio-3); }
+.ing__marca { font-family: var(--font-display); font-size: 64px; line-height: 1; font-weight: 800; letter-spacing: -0.03em; }
+.ing__marca-punto { color: var(--mandarina); }
+.ing__bajada { max-width: 300px; font: 500 18px/26px var(--font-texto); }
+
+.ing__acciones {
+  margin-top: auto;
+  padding: var(--espacio-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-3);
+}
+.ing__codigo { margin-top: var(--espacio-2); text-align: center; color: var(--tinta-suave); }
+
+@media (min-width: 1024px) {
+  .ing { flex-direction: row; flex-wrap: wrap; }
+
+  .ing__mobile-wrap { display: none; }
+  .ing__form-wrap { display: flex; }
+
+  .ing__lado {
+    display: flex;
+    flex: 999 1 560px;
+    min-width: 0;
+    background: var(--tinta);
+    color: var(--papel);
+    padding: var(--espacio-12) var(--espacio-12);
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--espacio-8);
+  }
+  .ing__lado-marca { font-family: var(--font-display); font-size: 32px; font-weight: 800; letter-spacing: -0.03em; }
+  .ing__arte { max-width: 820px; }
+  .ing__lado-frase { font-family: var(--font-display); font-size: 48px; line-height: 50px; font-weight: 700; letter-spacing: -0.02em; max-width: 680px; }
+
+  .ing__texto, .ing__acciones.ing__acciones--mobile { display: none; }
+
+  .ing__form-wrap { flex: 1 1 420px; display: flex; align-items: center; justify-content: center; padding: var(--espacio-12) var(--espacio-6); box-sizing: border-box; }
+  .ing__form { width: 100%; max-width: 400px; display: flex; flex-direction: column; gap: var(--espacio-6); }
+  .ing__form-titulo { font-family: var(--font-display); font-size: 40px; line-height: 44px; font-weight: 700; letter-spacing: -0.02em; }
+  .ing__form-bajada { color: var(--tinta-suave); margin-top: var(--espacio-2); }
+  .ing__botones { display: flex; flex-direction: column; gap: var(--espacio-3); }
+  .ing__separador { display: flex; align-items: center; gap: var(--espacio-3); color: var(--tinta-suave); }
+  .ing__separador-linea { flex: 1; height: 1px; background: var(--linea); }
+  .ing__mail { display: flex; flex-direction: column; gap: var(--espacio-3); }
+  .ing__invitacion { background: var(--lima-tinte); border-radius: var(--radio-md); padding: var(--espacio-4) var(--espacio-5); display: flex; flex-direction: column; gap: 4px; }
+}

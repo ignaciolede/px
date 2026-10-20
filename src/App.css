@@ -1,0 +1,16 @@
+/* Ayuda de desarrollo: botón fijo para comparar con design/componentes-referencia.
+   No es parte del producto. */
+.dev-switch {
+  position: fixed;
+  top: var(--espacio-3);
+  right: var(--espacio-3);
+  z-index: 60;
+  border: 0;
+  background: var(--tinta);
+  color: var(--papel);
+  padding: var(--espacio-2) var(--espacio-3);
+  border-radius: var(--radio-pill);
+  font: 600 13px/18px var(--font-texto);
+  cursor: pointer;
+  box-shadow: var(--sombra-flotante);
+}

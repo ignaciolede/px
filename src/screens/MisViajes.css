@@ -1,0 +1,127 @@
+/* P2 · Mis viajes — src/screens/MisViajes.jsx */
+
+.mv { padding: var(--espacio-4); max-width: 1200px; }
+
+.mv__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--espacio-3);
+}
+.mv__marca { font-family: var(--font-display); font-size: 20px; font-weight: 800; letter-spacing: -0.02em; }
+.mv__marca-punto { color: var(--mandarina); }
+
+.mv__avatar {
+  width: var(--avatar);
+  height: var(--avatar);
+  border-radius: 50%;
+  border: 0;
+  display: grid;
+  place-items: center;
+  font: 700 13px/1 var(--font-texto);
+  color: var(--sobre-color);
+  cursor: pointer;
+  flex: none;
+}
+
+.mv__saludo { margin-top: var(--espacio-6); }
+.mv__bajada { margin-top: var(--espacio-1); color: var(--tinta-suave); }
+
+.mv__filtros { display: none; }
+
+/* En curso */
+.mv__encurso {
+  margin-top: var(--espacio-6);
+  padding: var(--espacio-5);
+  border-radius: var(--radio-lg);
+  background: var(--mandarina);
+  color: var(--sobre-color);
+  position: relative;
+  overflow: hidden;
+}
+.mv__encurso-badge {
+  display: inline-flex;
+  padding: 2px var(--espacio-2);
+  border-radius: var(--radio-pill);
+  background: var(--papel-elevado);
+  color: var(--tinta);
+  font: 700 12px/16px var(--font-texto);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.mv__encurso-titulo { margin-top: var(--espacio-3); font-family: var(--font-display); font-size: 32px; line-height: 36px; font-weight: 700; letter-spacing: -0.02em; }
+.mv__encurso-pie { margin-top: var(--espacio-4); display: flex; flex-wrap: wrap; align-items: center; gap: var(--espacio-3); }
+.mv__encurso-detalle { font: 500 15px/20px var(--font-texto); }
+.mv__encurso-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--espacio-1);
+  height: 40px;
+  padding: 0 var(--espacio-4);
+  border: 0;
+  border-radius: var(--radio-pill);
+  background: var(--tinta);
+  color: var(--papel);
+  font: 600 14px/20px var(--font-texto);
+}
+
+.mv__proxima {
+  margin-top: var(--espacio-4);
+  padding: var(--espacio-5);
+  border-radius: var(--radio-lg);
+  background: var(--lima-tinte);
+}
+.mv__proxima-label { font: 700 12px/16px var(--font-texto); letter-spacing: 0.06em; text-transform: uppercase; color: var(--tinta-suave); }
+.mv__proxima-num { margin-top: var(--espacio-1); font-family: var(--font-display); font-size: 48px; line-height: 50px; font-weight: 700; }
+.mv__proxima-texto { margin-top: var(--espacio-2); color: var(--tinta-suave); }
+
+.mv__seccion { margin-top: var(--espacio-8); }
+.mv__seccion-titulo { font-family: var(--font-display); font-size: 20px; font-weight: 600; }
+
+.mv__grid { margin-top: var(--espacio-4); display: grid; gap: var(--espacio-4); grid-template-columns: 1fr; }
+
+.mv__pasado {
+  margin-top: var(--espacio-4);
+  display: flex;
+  align-items: center;
+  gap: var(--espacio-3);
+  padding: var(--espacio-3) var(--espacio-4);
+  background: var(--papel-elevado);
+  border-radius: var(--radio-md);
+  box-shadow: var(--sombra-card);
+}
+.mv__pasado-ini {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radio-md);
+  background: var(--cielo);
+  color: var(--sobre-color);
+  display: grid;
+  place-items: center;
+  font: 700 14px/1 var(--font-texto);
+  flex: none;
+}
+.mv__pasado-texto { flex: 1; min-width: 0; }
+.mv__pasado-titulo { font: 600 16px/22px var(--font-texto); }
+.mv__pasado-detalle { margin-top: 2px; color: var(--tinta-suave); }
+
+.mv__acciones { margin-top: var(--espacio-8); display: flex; flex-direction: column; gap: var(--espacio-3); }
+
+@media (min-width: 768px) {
+  .mv { padding: var(--espacio-6); }
+  .mv__grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (min-width: 1024px) {
+  .mv { padding: var(--espacio-12) var(--espacio-8); }
+  .mv__head { align-items: center; justify-content: flex-end; }
+  .mv__filtros { display: flex; gap: var(--espacio-2); }
+  /* En desktop el logo y Vos ya están en el sidebar (HomeLayout); acá solo quedan los filtros. */
+  .mv__marca, .mv__avatar { display: none; }
+  /* Crear viaje / Unirme con código también viven en el sidebar en desktop. */
+  .mv__acciones { display: none; }
+  .mv__encurso-fila { display: grid; grid-template-columns: 2fr 1fr; gap: var(--espacio-4); align-items: stretch; }
+  .mv__encurso { margin-top: var(--espacio-6); }
+  .mv__proxima { margin-top: var(--espacio-6); }
+  .mv__encurso-titulo { font-size: 48px; line-height: 52px; }
+}

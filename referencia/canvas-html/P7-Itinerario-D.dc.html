@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>PX — Itinerario (desktop)</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/px/tokens.css">
+<link rel="stylesheet" href="ds/px/components/bundle.css">
+<script src="ds/px/components/bundle.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&amp;family=Figtree:wght@400..700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:var(--mandarina-texto)}a:hover{color:var(--tinta)}
+</style>
+</helmet>
+<div style="min-height: 1000px; background: var(--papel); color: var(--tinta); font-family: var(--font-texto); display: flex; flex-wrap: wrap">
+<nav aria-label="Viaje" style="flex: 1 1 240px; max-width: 272px; background: var(--papel-hundido); padding: 28px 16px; box-sizing: border-box; display: flex; flex-direction: column; gap: 24px">
+<p style="margin: 0 0 0 12px; font-family: var(--font-display); font-size: 28px; line-height: 28px; font-weight: 800; letter-spacing: -0.03em">PX<span style="color: var(--mandarina)">.</span></p>
+<a href="#" style="display: inline-flex; align-items: center; gap: 4px; min-height: 44px; padding: 0 8px; color: var(--tinta-suave); font-weight: 600; font-size: 15px; text-decoration: none"><span style="display: inline-block; transform: scaleX(-1)"><x-import component-from-global-scope="PX.Icon" name="chevron"></x-import></span>Mis viajes</a>
+<div style="display: flex; align-items: center; gap: 12px; padding: 0 8px">
+<span style="width: 44px; height: 44px; border-radius: 14px; background: var(--lima); flex: none"></span>
+<span style="display: flex; flex-direction: column"><b style="font-size: 15px; line-height: 20px">Bariloche con los chicos</b><span style="font-size: 13px; line-height: 18px; color: var(--tinta-suave)">Faltan 23 días</span></span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<a href="#" style="display: flex; align-items: center; gap: 12px; min-height: 48px; padding: 0 16px; border-radius: 999px; color: var(--tinta); font-weight: 600; text-decoration: none"><x-import component-from-global-scope="PX.Icon" name="home"></x-import>Resumen</a>
+<a href="#" aria-current="page" style="display: flex; align-items: center; gap: 12px; min-height: 48px; padding: 0 16px; border-radius: 999px; background: var(--mandarina); color: var(--sobre-color); font-weight: 700; text-decoration: none"><x-import component-from-global-scope="PX.Icon" name="route"></x-import>Plan</a>
+<a href="#" style="display: flex; align-items: center; gap: 12px; min-height: 48px; padding: 0 16px; border-radius: 999px; color: var(--tinta); font-weight: 600; text-decoration: none"><x-import component-from-global-scope="PX.Icon" name="wallet"></x-import>Cuentas</a>
+<a href="#" style="display: flex; align-items: center; gap: 12px; min-height: 48px; padding: 0 16px; border-radius: 999px; color: var(--tinta); font-weight: 600; text-decoration: none"><x-import component-from-global-scope="PX.Icon" name="baul"></x-import>Baúl</a>
+</div>
+</nav>
+<main style="flex: 999 1 560px; min-width: 0; padding: 40px 48px 64px; box-sizing: border-box; display: flex; flex-direction: column; gap: 24px; max-width: 1220px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 20px">
+<h1 style="margin: 0; font-family: var(--font-display); font-size: 44px; line-height: 48px; font-weight: 700; letter-spacing: -0.03em">Plan</h1>
+<div style="display: flex; gap: 8px">
+<x-import component-from-global-scope="PX.Chip">Decidir · 2 abiertas</x-import>
+<x-import component-from-global-scope="PX.Chip" selected="{{yes}}" tone="previaje">Itinerario</x-import>
+<x-import component-from-global-scope="PX.Chip">Mapa</x-import>
+</div>
+</div>
+<div style="display: flex; gap: 8px">
+<x-import component-from-global-scope="PX.Button" variant="fantasma" icon="calendar">Sincronizar calendario</x-import>
+<x-import component-from-global-scope="PX.Button" variant="primario" icon="plus">Agregar plan</x-import>
+</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); gap: 10px">
+<a href="#" style="padding: 14px; border-radius: 20px; background: var(--papel-elevado); box-shadow: var(--sombra-card); color: var(--tinta); text-decoration: none; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 13px; line-height: 18px; font-weight: 600; color: var(--tinta-suave)">jue</span><span style="font-family: var(--font-display); font-size: 36px; line-height: 36px; font-weight: 800">14</span><span style="font-size: 12px; line-height: 16px; color: var(--tinta-suave)">Llegada</span></a>
+<a href="#" style="padding: 14px; border-radius: 20px; background: var(--papel-elevado); box-shadow: var(--sombra-card); color: var(--tinta); text-decoration: none; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 13px; line-height: 18px; font-weight: 600; color: var(--tinta-suave)">vie</span><span style="font-family: var(--font-display); font-size: 36px; line-height: 36px; font-weight: 800">15</span><span style="font-size: 12px; line-height: 16px; color: var(--tinta-suave)">Circuito chico</span></a>
+<a href="#" aria-current="date" style="padding: 14px; border-radius: 20px; background: var(--tinta); color: var(--papel); text-decoration: none; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 13px; line-height: 18px; font-weight: 600">sáb</span><span style="font-family: var(--font-display); font-size: 36px; line-height: 36px; font-weight: 800">16</span><span style="font-size: 12px; line-height: 16px">Montaña</span></a>
+<a href="#" style="padding: 14px; border-radius: 20px; background: var(--papel-elevado); box-shadow: var(--sombra-card); color: var(--tinta); text-decoration: none; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 13px; line-height: 18px; font-weight: 600; color: var(--tinta-suave)">dom</span><span style="font-family: var(--font-display); font-size: 36px; line-height: 36px; font-weight: 800">17</span><span style="font-size: 12px; line-height: 16px; color: var(--tinta-suave)">Lago</span></a>
+<a href="#" style="padding: 14px; border-radius: 20px; background: var(--papel-elevado); box-shadow: var(--sombra-card); color: var(--tinta); text-decoration: none; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 13px; line-height: 18px; font-weight: 600; color: var(--tinta-suave)">lun</span><span style="font-family: var(--font-display); font-size: 36px; line-height: 36px; font-weight: 800">18</span><span style="font-size: 12px; line-height: 16px; color: var(--tinta-suave)">Libre</span></a>
+<a href="#" style="padding: 14px; border-radius: 20px; background: var(--lima-tinte); color: var(--tinta); text-decoration: none; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 13px; line-height: 18px; font-weight: 600; color: var(--tinta-suave)">mar</span><span style="font-family: var(--font-display); font-size: 36px; line-height: 36px; font-weight: 800">19</span><span style="font-size: 12px; line-height: 16px; color: var(--tinta-suave)">Sin planes</span></a>
+<a href="#" style="padding: 14px; border-radius: 20px; background: var(--lima-tinte); color: var(--tinta); text-decoration: none; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 13px; line-height: 18px; font-weight: 600; color: var(--tinta-suave)">mié</span><span style="font-family: var(--font-display); font-size: 36px; line-height: 36px; font-weight: 800">20</span><span style="font-size: 12px; line-height: 16px; color: var(--tinta-suave)">Sin planes</span></a>
+<a href="#" style="padding: 14px; border-radius: 20px; background: var(--papel-elevado); box-shadow: var(--sombra-card); color: var(--tinta); text-decoration: none; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 13px; line-height: 18px; font-weight: 600; color: var(--tinta-suave)">jue</span><span style="font-family: var(--font-display); font-size: 36px; line-height: 36px; font-weight: 800">21</span><span style="font-size: 12px; line-height: 16px; color: var(--tinta-suave)">Vuelta</span></a>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: stretch">
+<section style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; flex-direction: column; gap: 2px">
+<p style="margin: 0; font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: 0.06em; color: var(--tinta-suave)">DÍA 3 · SÁBADO 16</p>
+<h2 style="margin: 0; font-family: var(--font-display); font-size: 40px; line-height: 44px; font-weight: 700; letter-spacing: -0.03em">Día de montaña</h2>
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 18px; border-radius: 16px; background: var(--aviso-relleno); color: var(--sobre-color)">
+<span style="flex: 1 1 240px; font-size: 15px; line-height: 21px"><b>Se pisan dos planes:</b> el chocolate termina 16:45 y el traslado al cerro Otto sale 16:30.</span>
+<x-import component-from-global-scope="PX.Button" variant="secundario" size="sm">Correr el traslado a 17:00</x-import>
+</div>
+<div>
+<x-import component-from-global-scope="PX.ItineraryItem" time="08:30" title="Desayuno en la cabaña"></x-import>
+<x-import component-from-global-scope="PX.ItineraryItem" time="10:00" title="Subida al Cerro Catedral" place="Base del cerro · 20 min en auto"></x-import>
+<x-import component-from-global-scope="PX.ItineraryItem" time="15:30" title="Chocolate en el centro" place="Mitre 450"></x-import>
+<x-import component-from-global-scope="PX.ItineraryItem" time="16:30" title="Traslado al cerro Otto" place="Sale desde Mitre y Quaglia"></x-import>
+<x-import component-from-global-scope="PX.ItineraryItem" time="20:30" title="Cena en El Boliche de Alberto" place="Villegas 347" last="{{yes}}"></x-import>
+</div>
+</section>
+<section aria-label="Mapa del día" style="flex: 1 1 380px; min-width: 0; min-height: 520px; position: relative; overflow: hidden; border-radius: 32px; background: var(--papel-hundido)">
+<svg viewBox="0 0 520 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Recorrido del día con cinco paradas" style="position: absolute; inset: 0; width: 100%; height: 100%">
+<rect width="520" height="600" style="fill: var(--papel-hundido)"></rect>
+<path d="M-20 420 C 100 360, 200 460, 320 410 S 480 330, 540 380 L 540 620 L -20 620 Z" style="fill: var(--cielo-tinte)"></path>
+<path d="M320 40 C 420 20, 500 90, 510 170 C 450 200, 370 190, 340 140 Z" style="fill: var(--lima-tinte)"></path>
+<path d="M-20 270 L 540 220" style="fill: none; stroke: var(--papel-elevado); stroke-width: 18; stroke-linecap: round"></path>
+<path d="M210 -20 L 260 420" style="fill: none; stroke: var(--papel-elevado); stroke-width: 12; stroke-linecap: round"></path>
+<path d="M90 160 C 150 180, 180 250, 240 250 S 360 200, 420 230 S 440 320, 360 350 S 200 340, 150 330" style="fill: none; stroke: var(--mandarina); stroke-width: 7; stroke-linecap: round; stroke-dasharray: 0.1 16"></path>
+<circle cx="90" cy="160" r="16" style="fill: var(--lima); stroke: var(--tinta); stroke-width: 3"></circle><text x="90" y="165" text-anchor="middle" style="font: 800 14px var(--font-texto); fill: var(--sobre-color)">1</text>
+<circle cx="240" cy="250" r="16" style="fill: var(--lima); stroke: var(--tinta); stroke-width: 3"></circle><text x="240" y="255" text-anchor="middle" style="font: 800 14px var(--font-texto); fill: var(--sobre-color)">2</text>
+<circle cx="420" cy="230" r="16" style="fill: var(--lima); stroke: var(--tinta); stroke-width: 3"></circle><text x="420" y="235" text-anchor="middle" style="font: 800 14px var(--font-texto); fill: var(--sobre-color)">3</text>
+<circle cx="360" cy="350" r="16" style="fill: var(--lima); stroke: var(--tinta); stroke-width: 3"></circle><text x="360" y="355" text-anchor="middle" style="font: 800 14px var(--font-texto); fill: var(--sobre-color)">4</text>
+<circle cx="150" cy="330" r="16" style="fill: var(--lima); stroke: var(--tinta); stroke-width: 3"></circle><text x="150" y="335" text-anchor="middle" style="font: 800 14px var(--font-texto); fill: var(--sobre-color)">5</text>
+</svg>
+<div style="position: absolute; left: 20px; right: 20px; bottom: 20px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px; padding: 14px 16px; border-radius: 20px; background: var(--papel-elevado); box-shadow: var(--sombra-flotante)">
+<span style="font-size: 14px; line-height: 20px"><b>38 km en el día.</b> Ordenando por cercanía ahorrás 9.</span>
+<x-import component-from-global-scope="PX.Button" variant="secundario" size="sm" icon="route">Ordenar ruta</x-import>
+</div>
+</section>
+</div>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1000}}'>
+class Component extends DCLogic {
+renderVals() {
+return { yes: true };
+}
+}
+</script>
+</body>
+</html>

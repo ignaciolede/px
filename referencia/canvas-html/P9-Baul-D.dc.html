@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>PX — Baúl (desktop)</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/px/tokens.css">
+<link rel="stylesheet" href="ds/px/components/bundle.css">
+<script src="ds/px/components/bundle.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&amp;family=Figtree:wght@400..700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:var(--mandarina-texto)}a:hover{color:var(--tinta)}
+</style>
+</helmet>
+<div style="min-height: 1000px; background: var(--papel); color: var(--tinta); font-family: var(--font-texto); display: flex; flex-wrap: wrap">
+<nav aria-label="Viaje" style="flex: 1 1 240px; max-width: 272px; background: var(--papel-hundido); padding: 28px 16px; box-sizing: border-box; display: flex; flex-direction: column; gap: 24px">
+<p style="margin: 0 0 0 12px; font-family: var(--font-display); font-size: 28px; line-height: 28px; font-weight: 800; letter-spacing: -0.03em">PX<span style="color: var(--mandarina)">.</span></p>
+<a href="#" style="display: inline-flex; align-items: center; gap: 4px; min-height: 44px; padding: 0 8px; color: var(--tinta-suave); font-weight: 600; font-size: 15px; text-decoration: none"><span style="display: inline-block; transform: scaleX(-1)"><x-import component-from-global-scope="PX.Icon" name="chevron"></x-import></span>Mis viajes</a>
+<div style="display: flex; align-items: center; gap: 12px; padding: 0 8px">
+<span style="width: 44px; height: 44px; border-radius: 14px; background: var(--lima); flex: none"></span>
+<span style="display: flex; flex-direction: column"><b style="font-size: 15px; line-height: 20px">Bariloche con los chicos</b><span style="font-size: 13px; line-height: 18px; color: var(--tinta-suave)">Faltan 23 días</span></span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<a href="#" style="display: flex; align-items: center; gap: 12px; min-height: 48px; padding: 0 16px; border-radius: 999px; color: var(--tinta); font-weight: 600; text-decoration: none"><x-import component-from-global-scope="PX.Icon" name="home"></x-import>Resumen</a>
+<a href="#" style="display: flex; align-items: center; gap: 12px; min-height: 48px; padding: 0 16px; border-radius: 999px; color: var(--tinta); font-weight: 600; text-decoration: none"><x-import component-from-global-scope="PX.Icon" name="route"></x-import>Plan</a>
+<a href="#" style="display: flex; align-items: center; gap: 12px; min-height: 48px; padding: 0 16px; border-radius: 999px; color: var(--tinta); font-weight: 600; text-decoration: none"><x-import component-from-global-scope="PX.Icon" name="wallet"></x-import>Cuentas</a>
+<a href="#" aria-current="page" style="display: flex; align-items: center; gap: 12px; min-height: 48px; padding: 0 16px; border-radius: 999px; background: var(--mandarina); color: var(--sobre-color); font-weight: 700; text-decoration: none"><x-import component-from-global-scope="PX.Icon" name="baul"></x-import>Baúl</a>
+</div>
+</nav>
+<main style="flex: 999 1 560px; min-width: 0; padding: 40px 48px 64px; box-sizing: border-box; display: flex; flex-direction: column; gap: 28px; max-width: 1240px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 20px">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<h1 style="margin: 0; font-family: var(--font-display); font-size: 56px; line-height: 56px; font-weight: 700; letter-spacing: -0.03em">Baúl</h1>
+<p style="margin: 0; font-size: 18px; line-height: 26px; color: var(--tinta-suave)">Lo que hay que llevar, hacer y tener a mano.</p>
+</div>
+<div style="display: flex; align-items: center; gap: 14px; padding: 12px 22px 12px 14px; border-radius: 999px; background: var(--lima); color: var(--sobre-color)">
+<span style="font-family: var(--font-display); font-size: 40px; line-height: 40px; font-weight: 800; letter-spacing: -0.04em">12/20</span>
+<span style="font-size: 15px; line-height: 20px; font-weight: 600">cosas listas</span>
+</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start">
+<section style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; justify-content: space-between; align-items: center"><h2 style="margin: 0; font-family: var(--font-display); font-size: 24px; line-height: 28px; font-weight: 700">Tareas del grupo</h2><x-import component-from-global-scope="PX.Button" variant="fantasma" size="sm" icon="plus">Tarea</x-import></div>
+<div style="display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-radius: 18px; background: var(--papel-elevado); box-shadow: var(--sombra-card)"><button type="button" aria-pressed="false" aria-label="Marcar como hecho: comprar los vuelos" style="flex: none; width: 28px; height: 28px; border-radius: 50%; border: 2px solid var(--linea-fuerte); background: transparent"></button><span style="flex: 1; display: flex; flex-direction: column"><b style="font-size: 16px; line-height: 22px">Comprar los vuelos</b><span style="font-size: 13px; line-height: 18px; color: var(--mandarina-texto); font-weight: 600">Vos · antes del 20 dic</span></span><x-import component-from-global-scope="PX.AvatarStack" people="{{yo}}"></x-import></div>
+<div style="display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-radius: 18px; background: var(--papel-elevado); box-shadow: var(--sombra-card)"><button type="button" aria-pressed="false" aria-label="Marcar como hecho: reservar la cabaña" style="flex: none; width: 28px; height: 28px; border-radius: 50%; border: 2px solid var(--linea-fuerte); background: transparent"></button><span style="flex: 1; display: flex; flex-direction: column"><b style="font-size: 16px; line-height: 22px">Reservar el alojamiento</b><span style="font-size: 13px; line-height: 18px; color: var(--tinta-suave)">Pedro · cuando cierre la votación</span></span><x-import component-from-global-scope="PX.AvatarStack" people="{{juli}}"></x-import></div>
+<div style="display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-radius: 18px; background: var(--papel-elevado); box-shadow: var(--sombra-card)"><button type="button" aria-pressed="false" aria-label="Marcar como hecho: alquilar el auto" style="flex: none; width: 28px; height: 28px; border-radius: 50%; border: 2px solid var(--linea-fuerte); background: transparent"></button><span style="flex: 1; display: flex; flex-direction: column"><b style="font-size: 16px; line-height: 22px">Alquilar el auto</b><span style="font-size: 13px; line-height: 18px; color: var(--tinta-suave)">Tomi · depende de la votación</span></span><x-import component-from-global-scope="PX.AvatarStack" people="{{tomi}}"></x-import></div>
+<div style="display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-radius: 18px; background: var(--papel-hundido)"><button type="button" aria-pressed="true" aria-label="Hecho: seguro de viaje" style="flex: none; width: 28px; height: 28px; border-radius: 50%; border: 0; background: var(--tinta); color: var(--papel); display: grid; place-items: center"><x-import component-from-global-scope="PX.Icon" name="check" size="{{sixteen}}"></x-import></button><span style="flex: 1; display: flex; flex-direction: column"><b style="font-size: 16px; line-height: 22px; color: var(--tinta-suave); text-decoration: line-through">Contratar seguro de viaje</b><span style="font-size: 13px; line-height: 18px; color: var(--tinta-suave)">Pedro lo resolvió</span></span></div>
+</section>
+<section style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 10px">
+<h2 style="margin: 0; font-family: var(--font-display); font-size: 24px; line-height: 28px; font-weight: 700">Documentos</h2>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
+<a href="#" style="min-height: 120px; padding: 16px; border-radius: 20px; background: var(--mandarina); color: var(--sobre-color); text-decoration: none; display: flex; flex-direction: column; justify-content: space-between"><span style="font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: 0.06em">PASAJE</span><b style="font-size: 17px; line-height: 22px">Ida · 14 ene</b></a>
+<a href="#" style="min-height: 120px; padding: 16px; border-radius: 20px; background: var(--cielo); color: var(--sobre-color); text-decoration: none; display: flex; flex-direction: column; justify-content: space-between"><span style="font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: 0.06em">PASAJE</span><b style="font-size: 17px; line-height: 22px">Vuelta · 21 ene</b></a>
+<a href="#" style="min-height: 120px; padding: 16px; border-radius: 20px; background: var(--tinta); color: var(--papel); text-decoration: none; display: flex; flex-direction: column; justify-content: space-between"><span style="font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: 0.06em">PÓLIZA</span><b style="font-size: 17px; line-height: 22px">Seguro de viaje</b></a>
+<a href="#" style="min-height: 120px; padding: 16px; border-radius: 20px; border: 2px dashed var(--linea-fuerte); color: var(--tinta-suave); text-decoration: none; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 6px; box-sizing: border-box"><x-import component-from-global-scope="PX.Icon" name="plus"></x-import><b style="font-size: 15px">Subir PDF o captura</b></a>
+</div>
+<p style="margin: 0; font-size: 13px; line-height: 18px; color: var(--tinta-suave)">Lo que subas se guarda en el celu de cada uno para abrirlo sin señal.</p>
+</section>
+<section style="flex: 1 1 280px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
+<h2 style="margin: 0; font-family: var(--font-display); font-size: 24px; line-height: 28px; font-weight: 700">Requisitos</h2>
+<div style="padding: 18px; border-radius: 20px; background: var(--papel-elevado); box-shadow: var(--sombra-card); display: flex; flex-direction: column; gap: 12px">
+<span style="display: flex; align-items: center; gap: 10px; font-size: 15px; line-height: 20px; color: var(--positivo); font-weight: 600"><x-import component-from-global-scope="PX.Icon" name="check" size="{{eighteen}}"></x-import>DNI vigente · 6 de 6</span>
+<span style="display: flex; align-items: center; gap: 10px; font-size: 15px; line-height: 20px; color: var(--positivo); font-weight: 600"><x-import component-from-global-scope="PX.Icon" name="check" size="{{eighteen}}"></x-import>Seguro de viaje</span>
+<span style="display: flex; align-items: center; gap: 10px; font-size: 15px; line-height: 20px; color: var(--aviso); font-weight: 600"><span style="width: 18px; text-align: center">!</span>Vuelos sin comprar</span>
+<span style="display: flex; align-items: center; gap: 10px; font-size: 15px; line-height: 20px; color: var(--aviso); font-weight: 600"><span style="width: 18px; text-align: center">!</span>Estadía en votación</span>
+</div>
+<div style="padding: 20px; border-radius: 20px; background: #b8361f; color: #ffffff; display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: 0.06em">EMERGENCIAS</span>
+<b style="font-size: 17px; line-height: 22px">Asistencia al viajero</b>
+<span style="font-size: 15px; line-height: 21px">[Teléfono de la póliza] · [Número de póliza]</span>
+<span style="font-size: 14px; line-height: 20px; opacity: 0.9">Durante el viaje, esto aparece fijo arriba de todo.</span>
+</div>
+</section>
+</div>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1000}}'>
+class Component extends DCLogic {
+renderVals() {
+return { sixteen: 16, eighteen: 18, yo: ['Nacho'], juli: ['Pedro'], tomi: ['Tomi'] };
+}
+}
+</script>
+</body>
+</html>

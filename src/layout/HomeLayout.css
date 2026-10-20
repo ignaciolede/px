@@ -1,0 +1,98 @@
+/* HomeLayout — chrome de navegación fuera de un viaje (Mis viajes / Vos).
+   El header de cada pantalla (saludo, avatar, filtros) lo arma la propia pantalla. */
+
+.home {
+  min-height: 100vh;
+  background: var(--papel);
+}
+
+.home__main {
+  min-height: 100vh;
+  padding-bottom: calc(var(--nav-alto) + var(--espacio-8) * 2);
+}
+.home__main--sin-nav { padding-bottom: 0; }
+
+.home__nav-mobile {
+  position: fixed;
+  left: 50%;
+  bottom: var(--espacio-4);
+  transform: translateX(-50%);
+  z-index: 15;
+  width: calc(100% - var(--espacio-4) * 2);
+}
+
+.home__sidebar { display: none; }
+
+@media (min-width: 1024px) {
+  .home { display: flex; }
+
+  .home__nav-mobile { display: none; }
+
+  .home__sidebar {
+    display: flex;
+    flex-direction: column;
+    flex: none;
+    width: 240px;
+    min-height: 100vh;
+    padding: var(--espacio-6) var(--espacio-4);
+    background: var(--papel-hundido);
+    box-sizing: border-box;
+    gap: var(--espacio-6);
+  }
+
+  .home__marca {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--tinta);
+  }
+  .home__marca-punto { color: var(--mandarina); }
+
+  .home__nav {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacio-1);
+  }
+  .home__nav-item {
+    display: flex;
+    align-items: center;
+    gap: var(--espacio-3);
+    height: var(--toque-min);
+    padding: 0 var(--espacio-3);
+    border: 0;
+    border-radius: var(--radio-pill);
+    background: transparent;
+    color: var(--tinta);
+    font: 600 15px/20px var(--font-texto);
+    cursor: pointer;
+    text-align: left;
+  }
+  .home__nav-item:hover { background: var(--papel-elevado); }
+  .home__nav-item--on,
+  .home__nav-item--on:hover { background: var(--mandarina); color: var(--sobre-color); }
+
+  .home__extra {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacio-2);
+  }
+
+  .home__spacer { flex: 1; }
+
+  .home__footer { color: var(--tinta-suave); }
+  .home__footer a,
+  .home__footer button {
+    border: 0;
+    background: transparent;
+    padding: 0;
+    color: var(--tinta-suave);
+    font: 600 14px/20px var(--font-texto);
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .home__footer a:hover,
+  .home__footer button:hover { color: var(--tinta); }
+
+  .home__main { flex: 1; min-width: 0; padding-bottom: 0; }
+}

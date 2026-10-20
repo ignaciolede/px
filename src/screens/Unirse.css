@@ -1,0 +1,71 @@
+/* P11 · Unirse — src/screens/Unirse.jsx */
+
+.un { padding: var(--espacio-4); max-width: 560px; display: flex; flex-direction: column; gap: var(--espacio-5); }
+
+.un__cerrar { align-self: flex-start; border: 0; background: transparent; padding: var(--espacio-2) 0; font: 600 15px/20px var(--font-texto); color: var(--tinta); cursor: pointer; }
+
+.un__bajada { margin-top: var(--espacio-1); color: var(--tinta-suave); }
+
+.un__codigo { display: flex; gap: var(--espacio-1); }
+.un__casilla {
+  flex: 1;
+  aspect-ratio: 1;
+  max-width: 48px;
+  min-width: 0;
+  border-radius: var(--radio-sm);
+  border: 1.5px solid var(--linea-fuerte);
+  background: var(--papel-elevado);
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--tinta);
+}
+.un__casilla:focus-visible { outline: 2px solid var(--foco); outline-offset: 2px; }
+
+.un__separador { display: flex; align-items: center; gap: var(--espacio-3); color: var(--tinta-suave); }
+.un__separador-linea { flex: 1; height: 1px; background: var(--linea); }
+
+.un__escanear { display: block; }
+.un__link-campo { display: none; }
+.un__label { font: 600 15px/20px var(--font-texto); }
+.un__input {
+  min-height: var(--control-md);
+  padding: 0 var(--espacio-4);
+  border-radius: var(--radio-sm);
+  border: 1.5px solid var(--linea-fuerte);
+  background: var(--papel-elevado);
+  color: var(--tinta);
+  font: 400 16px/24px var(--font-texto);
+  box-sizing: border-box;
+}
+.un__input:focus-visible { outline: 2px solid var(--foco); outline-offset: 2px; }
+
+.un__encontrado { display: flex; flex-direction: column; gap: var(--espacio-2); }
+.un__encontrado-label { display: none; color: var(--tinta-suave); }
+.un__tarjeta { border-radius: var(--radio-lg); background: var(--lima-tinte); padding: var(--espacio-5); display: flex; flex-direction: column; gap: var(--espacio-2); }
+.un__tarjeta-por { color: var(--tinta-suave); }
+.un__tarjeta-titulo { font-family: var(--font-display); font-size: 30px; font-weight: 700; }
+.un__tarjeta-meta { display: flex; align-items: center; gap: var(--espacio-2); }
+
+.un__acciones { display: flex; align-items: center; gap: var(--espacio-3); }
+.un__no-es-este { border: 0; background: transparent; font: 600 15px/20px var(--font-texto); color: var(--tinta); cursor: pointer; }
+
+.un__nota { color: var(--tinta-suave); }
+
+@media (min-width: 420px) {
+  .un__codigo { gap: var(--espacio-2); }
+  .un__casilla { max-width: 56px; }
+}
+
+@media (min-width: 1024px) {
+  .un-layout { display: flex; gap: var(--espacio-8); align-items: flex-start; max-width: 1100px; }
+  .un { max-width: 480px; }
+  .un__cerrar { display: none; }
+  .un__escanear { display: none; }
+  .un__link-campo { display: flex; flex-direction: column; gap: var(--espacio-2); }
+
+  .un__encontrado { gap: var(--espacio-3); flex: 1 1 380px; min-width: 0; }
+  .un__encontrado-label { display: block; font: 700 12px/16px var(--font-texto); letter-spacing: 0.06em; text-transform: uppercase; }
+}

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>PX — Agregar gasto (mobile)</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/px/tokens.css">
+<link rel="stylesheet" href="ds/px/components/bundle.css">
+<script src="ds/px/components/bundle.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&amp;family=Figtree:wght@400..700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:var(--mandarina-texto)}a:hover{color:var(--tinta)}
+</style>
+</helmet>
+<div style="position: relative; width: 390px; height: 900px; overflow: hidden; background: var(--papel); color: var(--tinta); font-family: var(--font-texto)">
+<div style="padding: 48px 16px 110px; display: flex; flex-direction: column; gap: 18px">
+<div style="display: flex; justify-content: space-between; align-items: center">
+<x-import component-from-global-scope="PX.Button" variant="fantasma" size="sm">Cancelar</x-import>
+<b style="font-size: 16px">Nuevo gasto</b>
+<span style="width: 88px"></span>
+</div>
+<div style="position: relative; border-radius: 24px; background: var(--mandarina-tinte); padding: 18px 18px 0; height: 196px; overflow: hidden">
+<span style="position: absolute; left: 14px; top: 14px; z-index: 1; display: inline-flex; align-items: center; gap: 6px; font-size: 12px; line-height: 16px; font-weight: 700; background: var(--tinta); color: var(--papel); padding: 5px 10px; border-radius: 999px"><x-import component-from-global-scope="PX.Icon" name="check" size="{{fourteen}}"></x-import>Leímos el ticket</span>
+<div style="margin: 26px auto 0; width: 220px; background: #ffffff; color: #1e2b26; padding: 16px 16px 24px; transform: rotate(-3deg); box-shadow: var(--sombra-flotante); font-family: ui-monospace, Menlo, monospace; font-size: 11px; line-height: 17px">
+<div style="text-align: center; font-weight: 700">PARRILLA LA TRANQUERA</div>
+<div style="text-align: center; color: #5a615b">16/01 · 21:40</div>
+<div style="display: flex; justify-content: space-between; margin-top: 6px"><span>Parrillada x2</span><span>28.000</span></div>
+<div style="display: flex; justify-content: space-between"><span>Ensaladas x3</span><span>9.600</span></div>
+<div style="display: flex; justify-content: space-between"><span>Bebidas</span><span>6.200</span></div>
+<div style="display: flex; justify-content: space-between; margin-top: 4px; font-weight: 700; background: #cdea6a; padding: 0 4px; margin-left: -4px; margin-right: -4px"><span>TOTAL</span><span>43.800</span></div>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 2px">
+<span style="font-family: var(--font-display); font-size: 56px; line-height: 56px; font-weight: 800; letter-spacing: -0.04em; font-variant-numeric: tabular-nums">$ 48.180</span>
+<span style="font-size: 14px; line-height: 20px; color: var(--tinta-suave)">$ 43.800 + 10% de propina · Parrilla La Tranquera</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 15px; line-height: 20px; font-weight: 600">¿Cómo se divide?</span>
+<div style="display: flex; gap: 8px">
+<x-import component-from-global-scope="PX.Chip" selected="{{yes}}" tone="viaje">Partes iguales</x-import>
+<x-import component-from-global-scope="PX.Chip">Por consumo</x-import>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 15px; line-height: 20px; font-weight: 600">Propina</span>
+<div style="display: flex; gap: 8px">
+<x-import component-from-global-scope="PX.Chip">Sin</x-import>
+<x-import component-from-global-scope="PX.Chip" selected="{{yes}}" tone="viaje">10%</x-import>
+<x-import component-from-global-scope="PX.Chip">15%</x-import>
+<x-import component-from-global-scope="PX.Chip">Otro</x-import>
+</div>
+</div>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 16px; border-radius: 16px; background: var(--papel-elevado); box-shadow: var(--sombra-card)">
+<span style="display: flex; flex-direction: column"><span style="font-size: 13px; line-height: 18px; color: var(--tinta-suave)">Lo pagaste vos · entre 6</span><b style="font-size: 18px; line-height: 24px; font-variant-numeric: tabular-nums">$ 8.030 cada uno</b></span>
+<x-import component-from-global-scope="PX.AvatarStack" people="{{chicos}}" max="{{four}}"></x-import>
+</div>
+</div>
+<div style="position: absolute; left: 16px; right: 16px; bottom: 32px">
+<x-import component-from-global-scope="PX.Button" variant="primario" full="{{yes}}">Guardar gasto</x-import>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":900}}'>
+class Component extends DCLogic {
+renderVals() {
+return { yes: true, four: 4, fourteen: 14, chicos: ['Nacho', 'Fede', 'Santi', 'Juan Cruz', 'Pedro', 'Tomi'] };
+}
+}
+</script>
+</body>
+</html>
