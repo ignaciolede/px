@@ -58,6 +58,82 @@ a { color: inherit; }
   clip: rect(0 0 0 0); white-space: nowrap; border: 0;
 }
 
+/* Movimiento (docs/01 "Movimiento"): fundido corto al aparecer una pantalla
+   o una card, con la misma curva que usan los componentes del sistema.
+   .px-in se pone en el contenedor que React monta de nuevo (una pantalla,
+   una vista interna de chips): como el nodo es nuevo, la animación se
+   repite solo con cambiar de pantalla, sin JS extra.
+   .px-stagger escalona hasta 12 hijos directos para que una lista no
+   aparezca toda de golpe. */
+@keyframes px-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+.px-in { animation: px-in .3s cubic-bezier(.2,.8,.2,1) both; }
+
+.px-stagger > * { animation: px-in .3s cubic-bezier(.2,.8,.2,1) both; }
+.px-stagger > *:nth-child(1)  { animation-delay: 0ms; }
+.px-stagger > *:nth-child(2)  { animation-delay: 35ms; }
+.px-stagger > *:nth-child(3)  { animation-delay: 70ms; }
+.px-stagger > *:nth-child(4)  { animation-delay: 105ms; }
+.px-stagger > *:nth-child(5)  { animation-delay: 140ms; }
+.px-stagger > *:nth-child(6)  { animation-delay: 175ms; }
+.px-stagger > *:nth-child(7)  { animation-delay: 210ms; }
+.px-stagger > *:nth-child(8)  { animation-delay: 245ms; }
+.px-stagger > *:nth-child(9)  { animation-delay: 280ms; }
+.px-stagger > *:nth-child(10) { animation-delay: 315ms; }
+.px-stagger > *:nth-child(n+11) { animation-delay: 350ms; }
+
+/* "Abrir una hoja" (docs/01): el sheet de Agregar gasto y similares, en el
+   rango de 150–220ms que pide la marca, no los 300ms del fundido general. */
+@keyframes px-sheet-in {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: none; }
+}
+.px-sheet-in { animation: px-sheet-in .2s cubic-bezier(.2,.8,.2,1) both; }
+
+/* Tarjetas y filas tocables: una elevación sutil al pasar el mouse. Es un
+   agregado de pantalla, no toca los componentes portados en sí. */
+.px-hover-lift {
+  transition: transform .18s cubic-bezier(.2,.8,.2,1), box-shadow .18s cubic-bezier(.2,.8,.2,1);
+}
+.px-hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--sombra-flotante);
+}
+
+/* Mismo gesto, ya puesto en las tarjetas y filas tocables de las pantallas
+   (tarjetas de viaje, filas de gasto, de grupo, de checklist, de votación…)
+   para no tener que repetir la clase en cada una. */
+:is(
+  .px-trip,
+  .mv__pasado,
+  .cu__fila,
+  .gr__miembro,
+  .plan__item,
+  .plan__dia,
+  .un__tarjeta,
+  .cv__fecha,
+  .vos__card,
+  .baul__doc
+) {
+  transition: transform .18s cubic-bezier(.2,.8,.2,1), box-shadow .18s cubic-bezier(.2,.8,.2,1);
+}
+:is(
+  .px-trip,
+  .mv__pasado,
+  .cu__fila,
+  .gr__miembro,
+  .plan__item,
+  .plan__dia,
+  .un__tarjeta,
+  .cv__fecha,
+  .vos__card,
+  .baul__doc
+):hover {
+  transform: translateY(-2px);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;

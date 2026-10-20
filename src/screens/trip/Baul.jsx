@@ -39,7 +39,7 @@ export default function Baul() {
       </div>
       <section>
         <p className="baul__seccion-titulo px-sobretitulo">Del grupo</p>
-        <div className="baul__lista">
+        <div className="baul__lista px-stagger">
           {CHECKLIST_GRUPO.map((t) => (
             <button key={t.id} type="button" className={'baul__item' + (grupo[t.id] ? ' baul__item--hecho' : '')} onClick={() => toggleGrupo(t.id)}>
               <span className="baul__check">{grupo[t.id] && <Icon name="check" size={16} />}</span>
@@ -54,7 +54,7 @@ export default function Baul() {
       </section>
       <section>
         <p className="baul__seccion-titulo px-sobretitulo">Solo tuyo</p>
-        <div className="baul__lista">
+        <div className="baul__lista px-stagger">
           {CHECKLIST_PERSONAL.map((t) => (
             <button key={t.id} type="button" className={'baul__item' + (personal[t.id] ? ' baul__item--hecho' : '')} onClick={() => togglePersonal(t.id)}>
               <span className="baul__check">{personal[t.id] && <Icon name="check" size={16} />}</span>
@@ -69,7 +69,7 @@ export default function Baul() {
   )
 
   const RequisitosBlock = (
-    <div className="baul__requisitos">
+    <div className="baul__requisitos px-stagger">
       {PREVIAJE.requisitos.map((r) =>
         r.ok ? (
           <span key={r.label} className="baul__requisito baul__requisito--ok px-cuerpo">
@@ -87,7 +87,7 @@ export default function Baul() {
   )
 
   const DocumentosBlock = (
-    <div className="baul__docs">
+    <div className="baul__docs px-stagger">
       {DOCUMENTOS_VIAJE.map((d) => (
         <div key={d.titulo} className={'baul__doc px-tone-' + d.tono}>
           <span className="baul__doc-tipo">{d.tipo}</span>
@@ -111,7 +111,7 @@ export default function Baul() {
   )
 
   return (
-    <div className="baul">
+    <div className="baul px-in">
       <div>
         <h1 className="px-display">Baúl</h1>
         <p className="baul__bajada px-cuerpo-lg">Lo que hay que llevar, hacer y tener a mano.</p>
@@ -139,12 +139,12 @@ export default function Baul() {
         {vista === 'emergencias' && EmergenciasBlock}
       </div>
 
-      <div className="baul__cols">
+      <div className="baul__cols px-stagger">
         <div className="baul__col">
           <div className="baul__col-cabecera">
             <p className="px-titulo-2">Tareas del grupo</p>
           </div>
-          <div className="baul__lista">
+          <div className="baul__lista px-stagger">
             {CHECKLIST_GRUPO.map((t) => (
               <button key={t.id} type="button" className={'baul__item' + (grupo[t.id] ? ' baul__item--hecho' : '')} onClick={() => toggleGrupo(t.id)}>
                 <span className="baul__check">{grupo[t.id] && <Icon name="check" size={16} />}</span>

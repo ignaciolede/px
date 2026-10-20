@@ -1,6 +1,7 @@
 /* P6/P7 · Plan (Decidir · Itinerario · Mapa) — src/screens/trip/Plan.jsx */
 
 .plan { padding: var(--espacio-4) var(--espacio-4) var(--espacio-8); display: flex; flex-direction: column; gap: var(--espacio-4); }
+.plan__itinerario-wrap { display: flex; flex-direction: column; gap: var(--espacio-4); }
 
 .plan__cabecera { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--espacio-3); }
 .plan__titulo-fila { display: flex; flex-wrap: wrap; align-items: center; gap: var(--espacio-3); }

@@ -10,7 +10,7 @@ export default function ResumenPost({ stage, onStageChange, people, resumen, pag
   const saldoPropio = pagado ? 0 : resumen.saldo.monto
 
   return (
-    <div>
+    <div className="px-in">
       <header className="rpost__hero">
         <button type="button" className="rpost__volver" onClick={onBack}>
           <Icon name="chevron" size={18} className="rpost__volver-icon" />
@@ -65,7 +65,7 @@ export default function ResumenPost({ stage, onStageChange, people, resumen, pag
               <Icon name="route" size={20} />
               Simplificamos: <b>{resumen.simplificado}</b>.
             </p>
-            <div className="rpost__saldos" style={{ marginTop: 'var(--espacio-3)' }}>
+            <div className="rpost__saldos px-stagger" style={{ marginTop: 'var(--espacio-3)' }}>
               {saldos.map((s) => (
                 <BalanceRow key={s.nombre} name={s.nombre} amount={s.amount} />
               ))}
@@ -75,7 +75,7 @@ export default function ResumenPost({ stage, onStageChange, people, resumen, pag
 
         <section>
           <h2 className="rpost__numeros-titulo">El viaje en números</h2>
-          <div className="rpost__numeros">
+          <div className="rpost__numeros px-stagger">
             <div className="rpost__numero rpost__numero--tinta">
               <span className="rpost__numero-label">Gastaron entre todos</span>
               <span className="rpost__numero-valor px-nums">{money(resumen.numeros.gastaronEntreTodos)}</span>

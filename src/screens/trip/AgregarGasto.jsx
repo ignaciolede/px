@@ -126,7 +126,7 @@ export default function AgregarGasto({ onCancelar, onGuardar }) {
         {modo === 'consumo' ? (
           <section>
             <p className="ag__bloque-titulo">Tocá las caras para decir quién comió qué.</p>
-            <div className="ag__items" style={{ marginTop: 'var(--espacio-2)' }}>
+            <div className="ag__items px-stagger" style={{ marginTop: 'var(--espacio-2)' }}>
               {g.items.map((it) => (
                 <div key={it.id} className="ag__item">
                   <div className="ag__item-cabecera">
@@ -158,7 +158,7 @@ export default function AgregarGasto({ onCancelar, onGuardar }) {
           </p>
         )}
 
-        <div className="ag__resumen">
+        <div className="ag__resumen px-stagger">
           {NOMBRES_GRUPO.map((n) => (
             <span key={n} className="ag__resumen-persona">
               {n === YO ? 'Vos' : n} {money(porPersona[n] || 0)}

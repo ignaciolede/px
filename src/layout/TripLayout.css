@@ -123,6 +123,7 @@
     font: 600 15px/20px var(--font-texto);
     cursor: pointer;
     text-align: left;
+    transition: background-color .18s cubic-bezier(.2,.8,.2,1), color .18s cubic-bezier(.2,.8,.2,1);
   }
   .trip__nav-item:hover { background: var(--papel-elevado); }
   .trip__nav-item--on,

@@ -50,7 +50,7 @@ export default function Grupo({ onBack }) {
   )
 
   return (
-    <div className="gr">
+    <div className="gr px-in">
       <button type="button" className="gr__volver" onClick={onBack}>
         <Icon name="chevron" size={18} className="gr__volver-icon" />
         {VIAJE.titulo}
@@ -69,7 +69,7 @@ export default function Grupo({ onBack }) {
         <div className="gr__bloque-codigo">{Codigo}</div>
 
         <div className="gr__bloque-miembros">
-          <div className="gr__miembros">
+          <div className="gr__miembros px-stagger">
             {mostrados.map((p) => (
               <div key={p.nombre} className="gr__miembro">
                 <AvatarStack people={[p.nombre]} max={1} />

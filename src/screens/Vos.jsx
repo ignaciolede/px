@@ -6,7 +6,7 @@ import './Vos.css'
    toda la demo": userColor vive en App.jsx y se pasa a quien lo necesite. */
 export default function Vos({ userColor, onChangeColor }) {
   return (
-    <div className="vos">
+    <div className="vos px-in">
       <div className="vos__topfila">
         <div className={'vos__hero px-tone-' + userColor + '-tinte'}>
           <span className={'vos__hero-avatar px-tone-' + userColor}>N</span>
@@ -18,7 +18,7 @@ export default function Vos({ userColor, onChangeColor }) {
           </div>
         </div>
 
-        <div className="vos__stats">
+        <div className="vos__stats px-stagger">
           <div className="vos__stat vos__stat--tinta">
             <span className="vos__stat-num px-nums">{VOS.stats.viajes}</span>
             <span>viajes con PX</span>
@@ -38,7 +38,7 @@ export default function Vos({ userColor, onChangeColor }) {
         </div>
       </div>
 
-      <div className="vos__cols">
+      <div className="vos__cols px-stagger">
         <section className="vos__card">
           <p className="vos__card-titulo">Cómo viajás</p>
           <p className="px-meta">Lo usamos para sugerir opciones cuando el grupo propone.</p>
@@ -81,7 +81,7 @@ export default function Vos({ userColor, onChangeColor }) {
         </section>
       </div>
 
-      <div className="vos__cols">
+      <div className="vos__cols px-stagger">
         <section className="vos__card">
           <p className="vos__card-titulo">Salida y moneda</p>
           <p className="px-cuerpo">

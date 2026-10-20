@@ -11,7 +11,7 @@ export default function MisViajes({ userColor = VOS.colorTono, onOpenBariloche, 
   const { enCurso, proximos, pasados } = OTROS_VIAJES
 
   return (
-    <div className="mv">
+    <div className="mv px-in">
       <header className="mv__head">
         <div>
           <p className="mv__marca">
@@ -59,7 +59,7 @@ export default function MisViajes({ userColor = VOS.colorTono, onOpenBariloche, 
 
       <section className="mv__seccion">
         <h2 className="mv__seccion-titulo">Próximos</h2>
-        <div className="mv__grid">
+        <div className="mv__grid px-stagger">
           {proximos.map((v) =>
             v.id === 'bariloche' ? (
               <TripCard
@@ -82,7 +82,7 @@ export default function MisViajes({ userColor = VOS.colorTono, onOpenBariloche, 
         </div>
       </section>
 
-      <section className="mv__seccion">
+      <section className="mv__seccion px-stagger">
         <h2 className="mv__seccion-titulo">Pasados</h2>
         {pasados.map((p) => (
           <div key={p.titulo} className="mv__pasado">

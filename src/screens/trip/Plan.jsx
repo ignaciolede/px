@@ -79,11 +79,11 @@ export default function Plan({ votacion, votoActual, onVote, otrasVotaciones }) 
       </div>
 
       {vista === 'decidir' && (
-        <div className="plan__decidir-cols">
+        <div className="plan__decidir-cols px-in">
           <div className="plan__decidir-col-izq">
             <div>
               <p className="plan__lista-titulo px-sobretitulo">Abiertas</p>
-              <div className="plan__lista">
+              <div className="plan__lista px-stagger">
                 <div className="plan__item">
                   <div>
                     <p className="plan__item-titulo">{votacion.pregunta}</p>
@@ -105,7 +105,7 @@ export default function Plan({ votacion, votoActual, onVote, otrasVotaciones }) 
             </div>
             <div>
               <p className="plan__lista-titulo px-sobretitulo">Decididas</p>
-              <div className="plan__lista">
+              <div className="plan__lista px-stagger">
                 {otrasVotaciones.decididas.map((v) => (
                   <div key={v.titulo} className="plan__item plan__item--decidida">
                     <div>
@@ -133,7 +133,7 @@ export default function Plan({ votacion, votoActual, onVote, otrasVotaciones }) 
                   <span className="px-cuerpo">Con {votacion.mayoria} votos pasa al plan.</span>
                 </div>
               </div>
-              <div className="plan__votacion-body">
+              <div className="plan__votacion-body px-stagger">
                 {votacion.opciones.map((o) => (
                   <PollOptionRow key={o.id} opcion={o} votacion={votacion} votoActual={votoActual} onVote={onVote} />
                 ))}
@@ -158,7 +158,7 @@ export default function Plan({ votacion, votoActual, onVote, otrasVotaciones }) 
       )}
 
       {vista === 'itinerario' && (
-        <>
+        <div className="plan__itinerario-wrap px-in">
           <div className="plan__dias">
             {ITINERARIO_DIAS.map((d, i) => (
               <button
@@ -195,7 +195,7 @@ export default function Plan({ votacion, votoActual, onVote, otrasVotaciones }) 
               )}
 
               {esHoy ? (
-                <div>
+                <div className="px-stagger">
                   {DIA_3.items.map((it) => (
                     <ItineraryItem
                       key={it.id}
@@ -225,11 +225,11 @@ export default function Plan({ votacion, votoActual, onVote, otrasVotaciones }) 
               </div>
             </div>
           </div>
-        </>
+        </div>
       )}
 
       {vista === 'mapa' && (
-        <p className="plan__mapa-placeholder px-cuerpo-lg">
+        <p className="plan__mapa-placeholder px-cuerpo-lg px-in">
           El mapa general del viaje todavía no está diseñado. Mientras tanto, el recorrido de cada día vive en Itinerario.
         </p>
       )}

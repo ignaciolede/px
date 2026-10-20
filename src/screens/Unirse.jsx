@@ -8,7 +8,7 @@ export default function Unirse({ onCerrar, onSumarme }) {
   const letras = VIAJE.codigo.replace(' ', '').split('')
 
   return (
-    <div className="un-layout">
+    <div className="un-layout px-in">
       <div className="un">
         <button type="button" className="un__cerrar" onClick={onCerrar}>
           Cerrar

@@ -67,6 +67,7 @@
     font: 600 15px/20px var(--font-texto);
     cursor: pointer;
     text-align: left;
+    transition: background-color .18s cubic-bezier(.2,.8,.2,1), color .18s cubic-bezier(.2,.8,.2,1);
   }
   .home__nav-item:hover { background: var(--papel-elevado); }
   .home__nav-item--on,

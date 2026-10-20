@@ -68,7 +68,7 @@ export default function Hoy({ stage, onStageChange, onAgregarGasto }) {
   const abreviado = dia.items.filter((it) => it.current || it.last)
 
   return (
-    <div className="hoy">
+    <div className="hoy px-in">
       <div className="hoy__mapa">
         <div className="hoy__mapa-svg hoy__mapa-svg--mobile">
           <MapaDelDiaMobile />
@@ -107,18 +107,18 @@ export default function Hoy({ stage, onStageChange, onAgregarGasto }) {
           <h1 className="hoy__titulo-dia px-display">{dia.titulo}</h1>
         </div>
 
-        <div className="hoy__itinerario hoy__itinerario--abreviado">
+        <div className="hoy__itinerario hoy__itinerario--abreviado px-stagger">
           {abreviado.map((it) => (
             <ItineraryItem key={it.id} time={it.time} title={it.title} place={it.placeHoy || it.place} current={it.current} last={it.last} />
           ))}
         </div>
-        <div className="hoy__itinerario hoy__itinerario--completo">
+        <div className="hoy__itinerario hoy__itinerario--completo px-stagger">
           {dia.items.map((it) => (
             <ItineraryItem key={it.id} time={it.time} title={it.title} place={it.placeHoy || it.place} done={it.done} current={it.current} last={it.last} />
           ))}
         </div>
 
-        <div className="hoy__stats">
+        <div className="hoy__stats px-stagger">
           <div className="hoy__stat hoy__stat--gasto">
             <span className="hoy__stat-label">Gastos de hoy</span>
             <span className="hoy__stat-monto px-nums">{money(dia.gastosDeHoy)}</span>

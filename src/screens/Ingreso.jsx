@@ -44,7 +44,7 @@ function ArteDesktop() {
 
 export default function Ingreso({ onEntrar, onIngresarCodigo }) {
   return (
-    <div className="ing">
+    <div className="ing px-in">
       <div className="ing__lado">
         <p className="ing__lado-marca">
           PX<span className="ing__marca-punto">.</span>

@@ -19,7 +19,7 @@ export default function Cuentas({ abrirGastoAlEntrar = false, onConsumirAbrir })
   }, [])
 
   return (
-    <div className="cu">
+    <div className="cu px-in">
       <div className="cu__col">
         <h1 className="cu__titulo px-display">Cuentas</h1>
 
@@ -36,7 +36,7 @@ export default function Cuentas({ abrirGastoAlEntrar = false, onConsumirAbrir })
 
         <section>
           <p className="cu__grupo-titulo px-sobretitulo">Hoy</p>
-          <div className="cu__lista">
+          <div className="cu__lista px-stagger">
             {g.hoy.map((it) => (
               <Fila key={it.id} it={it} />
             ))}
@@ -45,7 +45,7 @@ export default function Cuentas({ abrirGastoAlEntrar = false, onConsumirAbrir })
 
         <section>
           <p className="cu__grupo-titulo px-sobretitulo">Ayer</p>
-          <div className="cu__lista">
+          <div className="cu__lista px-stagger">
             {g.ayer.map((it) => (
               <Fila key={it.id} it={it} />
             ))}
@@ -72,7 +72,7 @@ export default function Cuentas({ abrirGastoAlEntrar = false, onConsumirAbrir })
       )}
 
       {gastoAbierto && (
-        <div className="cu__gasto-wrap">
+        <div className="cu__gasto-wrap px-sheet-in">
           <AgregarGasto onCancelar={() => setGastoAbierto(false)} onGuardar={() => setGastoAbierto(false)} />
         </div>
       )}

@@ -30,7 +30,7 @@ export default function ResumenPreviaje({
   }
 
   return (
-    <div>
+    <div className="px-in">
       <header className="rp__hero">
         <div className="rp__hero-top">
           <button type="button" className="rp__volver" onClick={onBack}>
@@ -79,7 +79,7 @@ export default function ResumenPreviaje({
               <h2 className="rp__seccion-titulo">Lo que te toca</h2>
               <span className="rp__seccion-meta px-meta">{pendientes.length} cosas</span>
             </div>
-            <div className="rp__toca">
+            <div className="rp__toca px-stagger">
               {pendientes.map((p) => (
                 <div
                   key={p.titulo}
@@ -113,7 +113,7 @@ export default function ResumenPreviaje({
                 Con {votacion.mayoria} votos pasa al plan. Faltan votar {votoActual ? 'Santi' : 'vos y Santi'}.
               </p>
             </div>
-            <div className="rp__poll-body">
+            <div className="rp__poll-body px-stagger">
               {votacion.opciones.map((o) => (
                 <PollOption
                   key={o.id}
@@ -140,7 +140,7 @@ export default function ResumenPreviaje({
           </section>
         </div>
 
-        <aside className="rp__rail">
+        <aside className="rp__rail px-stagger">
           <div className="rp__checklist">
             <div className="rp__checklist-cabecera">
               <span className="rp__checklist-num px-nums">

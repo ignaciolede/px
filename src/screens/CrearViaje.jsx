@@ -15,7 +15,7 @@ export default function CrearViaje({ onCancelar, onCrear }) {
   const destinoMostrado = sinDestino ? 'Tu próximo viaje' : destino || 'Tu próximo viaje'
 
   return (
-    <div className="cv-layout">
+    <div className="cv-layout px-in">
       <div className="cv">
         <button type="button" className="cv__cancelar" onClick={onCancelar}>
           Cancelar
